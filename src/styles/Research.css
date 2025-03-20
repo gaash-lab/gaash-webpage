@@ -1,0 +1,49 @@
+.research-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 40px;
+  background-color: #f5f5ff;
+}
+
+.research-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 20px;
+  max-width: 900px;
+}
+
+.research-card {
+  background-color: #dee3f4;
+  padding: 20px;
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.research-card h3 {
+  font-size: 1.3rem;
+  font-weight: bold;
+  color: #1f3c88;
+  margin-bottom: 10px;
+}
+
+.research-card p {
+  font-size: 1rem;
+  color: #333;
+  line-height: 1.5;
+}
+
+.research-button {
+  margin-top: 20px;
+  background-color: #1f3c88;
+  color: white;
+  padding: 10px 20px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  font-size: 1rem;
+}
+
+.research-button:hover {
+  background-color: #142c5b;
+}
