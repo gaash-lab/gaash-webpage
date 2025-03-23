@@ -36,8 +36,7 @@ const Research = () => {
         },
     ];
     return (
-        <div className="page">
-
+        <div className="w-full">
             <section className="w-full flex flex-col items-center text-center">
                 <div
                     className="w-full h-[400px] bg-cover bg-center mt-4 z-30 relative"
