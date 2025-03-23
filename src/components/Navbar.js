@@ -6,14 +6,14 @@ const Navbar = () => {
     const [isOpen, setIsOpen] = useState(false);
 
     return (
-        <header className="bg-white sticky w-full top-0 z-50">
+        <header className="bg-white sticky w-full top-0 z-50 shadow-sm">
             <nav className="container mx-auto flex items-center justify-between px-6 lg:px-0  py-4 max-w-7xl">
 
                 <div className="flex items-center">
                     <img src={Logo} alt="GAASH Logo" className="h-16" />
                 </div>
 
-                <ul className="hidden md:flex space-x-6 text-gray-700">
+                <ul className="hidden md:flex space-x-6 text-black">
                     <li><Link to="/" className="hover:text-blue-600">Home</Link></li>
                     <li><Link to="/news" className="hover:text-blue-600">News</Link></li>
                     <li><Link to="/about" className="hover:text-blue-600">About</Link></li>

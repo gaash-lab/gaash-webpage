@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React from "react";
 import banner_home from './../assets/banner-home.jpg'
 import Button from "../components/Button";
 import Heading from "../components/Heading";
@@ -40,7 +40,7 @@ const HomePage = () => {
             <section className="w-full flex flex-col items-center text-center">
                 <div className="my-10 font-oswald space-y-8">
                     <h2 className="text-3xl md:text-5xl font-extrabold">Intelligent Visual Analytics Lab</h2>
-                    <p className="text-lg md:text-2xl lg:text-3xl mt-2 font-semibold">Computer Vision Lab @ MBZUAI</p>
+                    <p className="text-lg md:text-2xl lg:text-3xl mt-2 font-semibold">Computer Vision Lab @ GAASH</p>
                 </div>
                 <div
                     className="w-full h-[400px] md:h-[500px] bg-cover bg-center mt-4 z-30 relative"
@@ -83,16 +83,6 @@ const HomePage = () => {
                 <Heading>Highlights</Heading>
                 <ReactSwiper newsItems={highlights} CardTemplate = {HighlightCard}/>
             </section>
-
-            
-            <div
-                className="banner"
-                style={{
-                    backgroundImage: `url("https://www.shutterstock.com/shutterstock/photos/2152122757/display_1500/stock-photo-business-intelligence-businessman-using-laptop-computer-global-network-connection-data-exchange-2152122757.jpg")`,
-                    marginBottom: "5rem"
-                }}
-            >
-            </div>
 
         </div>
     );
