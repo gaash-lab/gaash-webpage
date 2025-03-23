@@ -6,18 +6,20 @@ import About from "./pages/About";
 import Research from "./pages/Research";
 import Publications from "./pages/Publications";
 import Contact from "./pages/Contact";
+import Layout from "./Layout";
 
 function App() {
   return (
     <Router>
-      <Navbar />
       <Routes>
-        <Route path="/" element={<Home />} />
-        <Route path="/news" element={<News />} />
-        <Route path="/about" element={<About />} />
-        <Route path="/research" element={<Research />} />
-        <Route path="/publications" element={<Publications />} />
-        <Route path="/contact" element={<Contact />} />
+        <Route path="/" element={<Layout />} >
+          <Route index element={<Home />} />
+          <Route path="/news" element={<News />} />
+          <Route path="/about" element={<About />} />
+          <Route path="/research" element={<Research />} />
+          <Route path="/publications" element={<Publications />} />
+          <Route path="/contact" element={<Contact />} />
+        </Route>
       </Routes>
     </Router>
   );
