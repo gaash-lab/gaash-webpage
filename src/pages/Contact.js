@@ -1,44 +1,46 @@
 import React from 'react';
-import { FaEnvelope, FaPhone } from "react-icons/fa";
-import "../styles/Contact.css";
+import { Mail, Phone } from "lucide-react";
+import banner_contact from './../assets/banner-contact.avif';
+
 const Contact = () => {
     return (
-        <div className="page">
+        <div className="w-full">
+            <section className="w-full flex flex-col items-center text-center">
+                <div
+                    className="w-full h-[400px] bg-cover bg-center mt-4 z-30 relative"
+                    style={{
+                        backgroundImage: `url("${banner_contact}")`,
+                    }}
+                />
+            </section>
 
-            {/* Banner Image */}
-            <div
-                className="banner"
-                style={{
-                    backgroundImage: `url("https://www.shutterstock.com/shutterstock/photos/2152122757/display_1500/stock-photo-business-intelligence-businessman-using-laptop-computer-global-network-connection-data-exchange-2152122757.jpg")`,
-                }}
-            >
-                <div className="banner-overlay">
-                    <h2 className="banner-title">Intelligent Visual Analytics Lab</h2>
-                    <p className="banner-subtitle">Computer Vision Lab @ MBZUAI</p>
-                </div>
-            </div>
+            <section className="w-full max-w-4xl mx-auto bg-white p-6 sm:p-8 md:p-10 lg:p-16 -mt-32 md:-mt-40 z-40 relative text-center">
+                <h2 className="text-2xl sm:text-3xl md:text-4xl font-bold mb-6 md:mb-8 font-oswald tracking-wider">
+                    Contacts
+                </h2>
 
-            <div className="floating-box">
-                <h2 className="floating-box-title">Contacts</h2>
-                <div className="contact-item">
-                    <FaEnvelope className="contact-icon" />
-                    <p>Email: example@domain.com</p>
-                </div>
-                <div className="contact-item">
-                    <FaPhone className="contact-icon" />
-                    <p>Phone: +XXX XXX XXX XXXX</p>
-                </div>
-                <p className="contact-address">
-                    Computer Vision Lab at MBZUAI <br />
+                <p className="leading-7 sm:leading-8 md:leading-9 text-justify px-4 sm:px-6 md:px-8 text-base sm:text-lg mt-6">
+                    <span className="font-semibold text-blue-700">Computer Vision Lab at MBZUAI</span> <br />
                     Masdar City, Building 1B, 2nd Floor, Abu Dhabi, UAE.
                 </p>
-                <p className="contact-directions">
+                <p className="leading-7 sm:leading-8 md:leading-9 text-justify px-4 sm:px-6 md:px-8 text-base sm:text-lg mt-4">
                     Enter Building 1B close to Multipurpose Hall and take the stairs/elevator to Floor 2.
                 </p>
-                <p className="contact-hours">9:00 to 17:00 Monday to Friday</p>
-            </div>
-        </div >
+                <p className="font-semibold mt-6 text-lg sm:text-xl">9:00 to 17:00 Monday to Friday</p>
+
+                <div className="space-y-4 sm:space-y-6 md:space-y-8 px-4 sm:px-6 md:px-8 mt-10">
+                    <div className="flex items-center justify-left space-x-4">
+                        <Mail className="text-blue-700 w-6 h-6 sm:w-7 sm:h-7" />
+                        <p className="text-base sm:text-lg">example@domain.com</p>
+                    </div>
+                    <div className="flex items-center justify-left space-x-4">
+                        <Phone className="text-blue-700 w-6 h-6 sm:w-7 sm:h-7" />
+                        <p className="text-base sm:text-lg">+XXX XXX XXX XXXX</p>
+                    </div>
+                </div>
+            </section>
+        </div>
     );
 };
 
-export default Contact; 
+export default Contact;
