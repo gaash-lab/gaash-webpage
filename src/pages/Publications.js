@@ -1,6 +1,7 @@
 import React from 'react';
 import banner_publications from './../assets/banner-publications.avif'
 import { limitedsupervisionvision, medicalimageanalysis, multimodallearning, personcentricvision, remotesensingandearthvision, synthesisandgeneration } from '../data/publications';
+import ScrollToTop from '../components/ScrollToTop';
 const Publications = () => {
 
 
@@ -154,7 +155,7 @@ const Publications = () => {
                     }
                 </div>
             </section>
-
+            <ScrollToTop />
 
         </div>
     );

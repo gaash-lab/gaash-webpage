@@ -2,6 +2,7 @@ import React from 'react';
 import banner_about from './../assets/banner-about.avif';
 import Heading from '../components/Heading';
 import { Mail, Globe, BookOpen } from "lucide-react";
+import ScrollToTop from '../components/ScrollToTop';
 
 const facultyMembers = [
     {
@@ -50,9 +51,9 @@ const ProfileCard = ({ name, designation, email, website, scholar, image }) => {
     return (
         <div className="w-full max-w-xs rounded-xl border border-gray-500 bg-white overflow-hidden font-oswald tracking-wide">
             <div className="w-full h-[300px]">
-                <img 
-                    src={image} 
-                    alt={name} 
+                <img
+                    src={image}
+                    alt={name}
                     className="w-full h-full object-cover"
                 />
             </div>
@@ -123,6 +124,7 @@ const About = () => {
             <section>
                 <Heading className="text-blue-800">Research Assistants</Heading>
             </section>
+            <ScrollToTop />
         </div>
     );
 };
