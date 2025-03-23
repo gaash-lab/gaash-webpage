@@ -2,6 +2,9 @@ import React, { useState } from "react";
 import "../styles/Page.css";
 import "../styles/Research.css";
 
+import banner_research from './../assets/banner-research.avif'
+import Button from "../components/Button";
+
 const Research = () => {
     const researchData = [
         {
@@ -38,36 +41,44 @@ const Research = () => {
     return (
         <div className="page">
 
-            {/* Banner Image */}
-            <div
-                className="banner"
-                style={{
-                    backgroundImage: `url("https://www.shutterstock.com/shutterstock/photos/2152122757/display_1500/stock-photo-business-intelligence-businessman-using-laptop-computer-global-network-connection-data-exchange-2152122757.jpg")`,
-                }}
-            >
-                <div className="banner-overlay">
-                    <h2 className="banner-title">Intelligent Visual Analytics Lab</h2>
-                    <p className="banner-subtitle">Computer Vision Lab @ MBZUAI</p>
-                </div>
-            </div>
+            <section className="w-full flex flex-col items-center text-center">
+                <div
+                    className="w-full h-[400px] bg-cover bg-center mt-4 z-30 relative"
+                    style={{
+                        backgroundImage: `url("${banner_research}")`,
+                    }}
+                />
+            </section>
 
-            <div className="floating-box">
-                <h2 className="floating-box-title">Research</h2>
-                <p>
+            <section className="w-full max-w-4xl mx-auto bg-white p-6 sm:p-8 md:p-10 lg:p-16 -mt-32 md:-mt-40 z-40 relative text-center">
+                <h2 className="text-2xl sm:text-3xl md:text-4xl font-bold text-center mb-6 md:mb-8 font-oswald tracking-wider">
+                    Research
+                </h2>
+                <p className="leading-7 sm:leading-8 md:leading-9 text-justify px-4 sm:px-6 md:px-8 text-base sm:text-normal md:text-lg">
                     Members of IVAL at MBZUAI conduct research primarily in Multi-modal learning, Remote sensing and earth vision, Person centric vision, Synthesis and Generation, Visual Recognition with Limited Supervision and Medical Image Analysis
+
                 </p>
-            </div>
-            <div className="research-container">
-                <div className="research-grid">
+            </section>
+
+            <section className="w-full max-w-4xl mx-auto mt-10">
+                <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
                     {researchData.map((item, index) => (
-                        <div key={index} className="research-card">
-                            <h3>{item.title}</h3>
-                            <p>{item.description}</p>
+                        <div key={index} className="p-6 bg-indigo-100 space-y-4 text-center group">
+                            <h3 className="font-bold text-blue-800 text-2xl text-center font-oswald">{item.title}</h3>
+                            <p className="text-justify text-sm">{item.description}</p>
+                            <button className="py-2 px-6 text-xs border border-gray-500 rounded-full group-hover:bg-blue-800 group-hover:text-white transition-colors duration-300 group-hover:border-transparent">Read More</button>
                         </div>
                     ))}
+
                 </div>
-                <button className="research-button">See Publications</button>
-            </div>
+                <div className="text-center my-10">
+                    <Button onClick={()=>window.location.href = '/publications'}>See Publications</Button>
+                </div>
+            </section>
+
+
+
+
             <div
                 className="banner"
                 style={{
