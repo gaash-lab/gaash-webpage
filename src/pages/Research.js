@@ -1,7 +1,4 @@
-import React, { useState } from "react";
-import "../styles/Page.css";
-import "../styles/Research.css";
-
+import React from "react";
 import banner_research from './../assets/banner-research.avif'
 import Button from "../components/Button";
 
@@ -72,22 +69,9 @@ const Research = () => {
 
                 </div>
                 <div className="text-center my-10">
-                    <Button onClick={()=>window.location.href = '/publications'}>See Publications</Button>
+                    <Button onClick={() => window.location.href = '/publications'}>See Publications</Button>
                 </div>
             </section>
-
-
-
-
-            <div
-                className="banner"
-                style={{
-                    backgroundImage: `url("https://www.shutterstock.com/shutterstock/photos/2152122757/display_1500/stock-photo-business-intelligence-businessman-using-laptop-computer-global-network-connection-data-exchange-2152122757.jpg")`,
-                    marginBottom: "5rem"
-                }}
-            >
-            </div>
-
         </div>
     );
 };
