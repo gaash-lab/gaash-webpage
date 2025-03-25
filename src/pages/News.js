@@ -1,55 +1,6 @@
 import React from 'react'
 import banner_news from './../assets/banner-news.avif'
-const cards = [
-    {
-        title: "Ten papers accepted in ICCV 2023.",
-        description: "Ten (10) papers accepted from the IVAL group in the competitive IEEE/CVF...",
-        link: "#",
-        image: "https://placehold.co/300x200",
-    },
-    {
-        title: "Introducing Oryx: An MBZUAI library for Large Vision-...",
-        description: "Today, we are publicly releasing a set of projects and demos for a breed of large...",
-        link: "#",
-        image: "https://placehold.co/300x300",
-    },
-    {
-        title: "Eleven papers accepted in CVPR 2023.",
-        description: "Eleven (11) papers accepted from the IVAL group in the competitive IEEE/CVF...",
-        link: "#",
-        image: "https://placehold.co/300x150",
-    },
-    {
-        title: "Six papers accepted in ECCV 2022.",
-        description: "Six (6) papers accepted from the group in the competitive European Conference of...",
-        link: "#",
-        image: "https://placehold.co/300x180",
-    },
-    {
-        title: "Three papers accepted in NeurIPS 2022.",
-        description: "Three (3) papers accepted from the group in the competitive 36th Conferenc...",
-        link: "#",
-        image: "https://placehold.co/300x200",
-    },
-    {
-        title: "Four (4) papers accepted in NeurIPS 2021 and ICLR 2021.",
-        description: "Three (3) papers accepted from the group in the Neural Information Processing...",
-        link: "#",
-        image: "https://placehold.co/300x250",
-    },
-    {
-        title: "Ten papers accepted in CVPR 2022.",
-        description: "Ten (10) papers accepted from the group in the competitive IEEE/CVF Conference of...",
-        link: "#",
-        image: "https://placehold.co/300x200",
-    },
-    {
-        title: "Five papers accepted in ICCV 2021.",
-        description: "Five (5) papers accepted from the group in the competitive IFFF/CVF International...",
-        link: "#",
-        image: "https://placehold.co/300x100",
-    },
-];
+import { cards } from '../data/constants'
 
 
 const News = () => {

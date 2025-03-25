@@ -7,7 +7,7 @@ const Layout = () => {
     return (
         <div className='bg-[#f3f4f9] font-montserrat'>
             <Navbar />
-            <main className='w-full container mx-auto min-h-screen'>
+            <main className='w-full min-h-screen'>
                 <Outlet />
             </main>
             <Footer/>

@@ -3,49 +3,8 @@ import banner_about from './../assets/banner-about.avif';
 import Heading from '../components/Heading';
 import { Mail, Globe, BookOpen } from "lucide-react";
 import ScrollToTop from '../components/ScrollToTop';
+import {facultyMembers} from '../data/constants';
 
-const facultyMembers = [
-    {
-        name: "Dr. Alice Johnson",
-        designation: "Professor, Computer Science",
-        email: "alice.johnson@example.com",
-        website: "https://alicejohnson.com",
-        scholar: "https://scholar.google.com/citations?user=alice",
-        image: "https://placehold.co/200x300"
-    },
-    {
-        name: "Dr. Robert Smith",
-        designation: "Associate Professor, AI Research",
-        email: "robert.smith@example.com",
-        website: "https://robertsmith.ai",
-        scholar: "https://scholar.google.com/citations?user=robert",
-        image: "https://placehold.co/200x300"
-    },
-    {
-        name: "Dr. Emily Carter",
-        designation: "Assistant Professor, Data Science",
-        email: "emily.carter@example.com",
-        website: "https://emilycarterds.com",
-        scholar: "https://scholar.google.com/citations?user=emily",
-        image: "https://placehold.co/200x300"
-    },
-    {
-        name: "Dr. Emily Carter",
-        designation: "Assistant Professor, Data Science",
-        email: "emily.carter@example.com",
-        website: "https://emilycarterds.com",
-        scholar: "https://scholar.google.com/citations?user=emily",
-        image: "https://placehold.co/200x300"
-    },
-    {
-        name: "Dr. Emily Carter",
-        designation: "Assistant Professor, Data Science",
-        email: "emily.carter@example.com",
-        website: "https://emilycarterds.com",
-        scholar: "https://scholar.google.com/citations?user=emily",
-        image: "https://placehold.co/200x300"
-    },
-];
 
 const ProfileCard = ({ name, designation, email, website, scholar, image }) => {
     return (

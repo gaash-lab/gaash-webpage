@@ -1,40 +1,10 @@
 import React from "react";
 import banner_research from './../assets/banner-research.avif'
 import Button from "../components/Button";
+import {researchData} from "../data/constants";
 
 const Research = () => {
-    const researchData = [
-        {
-            title: "Multi-modal Learning",
-            description:
-                "Deep learning with multiple modalities of data including images, videos, text and audio. Our team at IVAL explores how multi-modal understanding can be used for improving generalization in vision applications such as open-vocabulary object detection, and visual question-answering.",
-        },
-        {
-            title: "Remote Sensing and Earth Vision",
-            description:
-                "Remote sensing data provide an unbiased, uninterrupted and borderless view of human activities and natural processes. Powered by data collected from diverse satellite systems, deep-learning models can be used to gain insight to guide targeted actions in remote locations.",
-        },
-        {
-            title: "Person Centric Vision",
-            description:
-                "Under the theme of human-centric visual analysis using deep learning, our team at IVAL explores problems including face detection, facial landmark localization, pedestrian detection and abnormal activity detection.",
-        },
-        {
-            title: "Synthesis and Generation",
-            description:
-                "Our team at IVAL researches new methods for generating high-resolution, realistic images and videos, and generation of synthetic data. Our team also works on fundamental concepts in generative models.",
-        },
-        {
-            title: "Visual Recognition with Limited Supervision",
-            description:
-                "The theme explores various generic vision applications using deep learning with limited supervision including semi-supervised, weakly-supervised, few-shot, zero-shot, and self-supervised learning.",
-        },
-        {
-            title: "Medical Image Analysis",
-            description:
-                "Our team at IVAL investigates real-world healthcare problems using medical imaging with deep learning and computer vision. We are also interested in investigating fundamental concepts in medical imaging such as multi-organ segmentation, medical image generation and deep-learning architectures for medical imaging.",
-        },
-    ];
+    
     return (
         <div className="w-full">
             <section className="w-full flex flex-col items-center text-center">

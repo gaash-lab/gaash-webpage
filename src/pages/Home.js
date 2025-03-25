@@ -3,38 +3,10 @@ import banner_home from './../assets/banner-home.jpg'
 import Button from "../components/Button";
 import Heading from "../components/Heading";
 import ReactSwiper from "../components/ReactSwiper";
+import {highlights, newsItems} from "../data/constants";
 
 const HomePage = () => {
-    const newsItems = [
-        { id: 1, text: "Ten papers accepted in ICCV 2023." },
-        { id: 2, text: "Introducing Oryx: An MBZUAI library for Large Vision-..." },
-        { id: 3, text: "Eleven papers accepted in CVPR 2023." },
-    ];
-
-    const highlights = [
-        {
-            title: "ACCV 2022 Workshop",
-            subtitle: "Vision Transformers: Theory and Applications",
-            description:
-                "The first one-day conference on vision transformers, on the occasion of ACCV 2022, is an exciting chance to present and discuss vision transformers and their applications in various computer vision sub-fields. The workshop showcases exciting invited talks by Prof. Mubarak Shah, Ming-Hsuan Yang, and Rita Cucchiara.",
-            link: "#"
-        },
-        {
-            title: "NeurIPS 2023 Keynote",
-            subtitle: "Advancements in AI",
-            description:
-                "Keynote session on AI advancements at NeurIPS 2023, covering vision models, deep learning, and generative AI applications.",
-            link: "#"
-        },
-        {
-            title: "ICLR 2023 Paper",
-            subtitle: "Self-Supervised Learning",
-            description:
-                "Our latest paper on self-supervised learning for vision applications has been accepted at ICLR 2023.",
-            link: "#"
-        }
-    ];
-   
+    
     return (
         <div className="w-full">
             <section className="w-full flex flex-col items-center text-center">
