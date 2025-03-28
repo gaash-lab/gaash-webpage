@@ -1,188 +1,169 @@
-import React from 'react';
+import React, { useState } from 'react';
 import banner_publications from './../assets/banner-publications.avif'
-import { limitedsupervisionvision, medicalimageanalysis, multimodallearning, personcentricvision, remotesensingandearthvision, synthesisandgeneration } from '../data/publications';
 import ScrollToTop from '../components/ScrollToTop';
-const Publications = () => {
 
+const dummyPublications = [
+    {
+        id: 1,
+        title: "Advanced Multi-Modal Learning Techniques in Computer Vision",
+        authors: "John Doe, Jane Smith, Alex Johnson",
+        conference: "CVPR 2024",
+        link: "#",
+        image: "/api/placeholder/800/600",
+        year: "2024"
+    },
+    {
+        id: 2,
+        title: "Semantic Understanding in Limited Supervision Scenarios",
+        authors: "Emily Wong, Michael Lee, Sarah Kim",
+        conference: "NeurIPS 2024",
+        link: "#",
+        image: "/api/placeholder/800/600",
+        year: "2024"
+    },
+    {
+        id: 3,
+        title: "Person-Centric Vision: A Comprehensive Approach",
+        authors: "David Brown, Lisa Chen, Robert Garcia",
+        conference: "ICCV 2023",
+        link: "#",
+        image: "/api/placeholder/800/600",
+        year: "2023"
+    },
+    {
+        id: 4,
+        title: "Generative Models in Visual Synthesis",
+        authors: "Maria Rodriguez, Tom Wilson, Anna Patel",
+        conference: "ECCV 2023",
+        link: "#",
+        image: "/api/placeholder/800/600",
+        year: "2023"
+    },
+    {
+        id: 5,
+        title: "Remote Sensing and Earth Observation Techniques",
+        authors: "Carlos Mendez, Emma Thompson, Raj Patel",
+        conference: "WACV 2022",
+        link: "#",
+        image: "/api/placeholder/800/600",
+        year: "2022"
+    },
+    {
+        id: 6,
+        title: "Medical Image Analysis using Deep Learning",
+        authors: "Sophie Martin, Kevin Zhang, Olivia Nguyen",
+        conference: "MICCAI 2022",
+        link: "#",
+        image: "/api/placeholder/800/600",
+        year: "2022"
+    }
+];
+
+const Publications = () => {
+    const [searchTerm, setSearchTerm] = useState('');
+
+    // Group publications by year and sort years in descending order
+    const publicationsByYear = dummyPublications.reduce((acc, pub) => {
+        if (!acc[pub.year]) {
+            acc[pub.year] = [];
+        }
+        acc[pub.year].push(pub);
+        return acc;
+    }, {});
+
+    const sortedYears = Object.keys(publicationsByYear).sort((a, b) => b.localeCompare(a));
 
     return (
-        <div className='w-full bg-white'>
-            <section className="w-full flex flex-col items-center text-center">
-                <div
-                    className="w-full h-[400px] bg-cover bg-center mt-4 z-30 relative"
-                    style={{
-                        backgroundImage: `url("${banner_publications}")`,
-                    }}
-                />
-            </section>
-            <section className="w-full max-w-4xl mx-auto bg-white p-6 sm:p-8 md:p-10 lg:p-16 -mt-32 md:-mt-40 z-40 relative text-center">
-                <h2 className="text-2xl sm:text-3xl md:text-4xl font-bold text-center mb-6 md:mb-8 font-oswald tracking-wider">
-                    Publications
-                </h2>
-                <div className='grid grid-cols-1 md:grid-cols-2 gap-8'>
-                    <a
-                        className='inline-block px-6 py-2 font-semibold bg-blue-800 hover:bg-blue-700 cursor-pointer text-white'
-                        href='#multimodallearning'
-                    >
-                        Multi-modal Learning
-                    </a>
-                    <a
-                        className='inline-block px-6 py-2 font-semibold bg-blue-800 hover:bg-blue-700 cursor-pointer text-white'
-                        href='#limitedsupervisionvision'
-                    >
-                        Limited Supervision Vision
-                    </a>
-                    <a
-                        className='inline-block px-6 py-2 font-semibold bg-blue-800 hover:bg-blue-700 cursor-pointer text-white'
-                        href='#personcentricvision'
-                    >
-                        Person Centric Vision
-                    </a>
-                    <a
-                        className='inline-block px-6 py-2 font-semibold bg-blue-800 hover:bg-blue-700 cursor-pointer text-white'
-                        href='#synthesisandgeneration'
-                    >
-                        Synthesis and Generation
-                    </a>
-                    <a
-                        className='inline-block px-6 py-2 font-semibold bg-blue-800 hover:bg-blue-700 cursor-pointer text-white'
-                        href='#remotesensingandearthvision'
-                    >
-                        Remote Sensing and Earth Vision
-                    </a>
-                    <a
-                        className='inline-block px-6 py-2 font-semibold bg-blue-800 hover:bg-blue-700 cursor-pointer text-white'
-                        href='#medicalimageanalysis'
-                    >
-                        Medical Image Analysis
-                    </a>
+        <div className="bg-gray-50 min-h-screen">
+            <div 
+                className="h-[300px] bg-cover bg-center relative flex items-center justify-center"
+                style={{
+                    backgroundImage: `linear-gradient(rgba(0,0,0,0.6), rgba(0,0,0,0.6)), url("${banner_publications}")`,
+                }}
+            >
+                <div className="text-center">
+                    <h1 className="text-5xl font-bold text-white mb-6">
+                        Research Publications
+                    </h1>
+                    <input 
+                        type="text"
+                        placeholder="Search publications..."
+                        className="w-full max-w-xl px-4 py-3 rounded-full text-lg"
+                        value={searchTerm}
+                        onChange={(e) => setSearchTerm(e.target.value)}
+                    />
                 </div>
-            </section>
+            </div>
 
-            <section className='p-6 mt-[150px] max-w-7xl conatiner mx-auto'>
-                <div id='multimodallearning' className='h-24'></div>
-                <h2 className='my-4 font-oswald tracking-wide font-bold text-3xl underline text-blue-800'>{multimodallearning.title}</h2>
-                <div className='w-full space-y-4 bg-white'>
-                    {
-                        multimodallearning?.papers.map((item, index) => (
-                            <PaperCard key={index} title={item.title}
-                                authors={item.authors}
-                                conference={item.conference}
-                                link={item.link}
-                                imageUrl={item.image}
-                            />
-                        ))
-                    }
-                </div>
-            </section>
-            <section className='p-6 mt-[150px] max-w-7xl conatiner mx-auto'>
-                <div id='limitedsupervisionvision' className='h-24'></div>
-                <h2 className='my-4 font-oswald tracking-wide font-bold text-3xl underline text-blue-800'>{limitedsupervisionvision.title}</h2>
-                <div className='w-full space-y-4 bg-white'>
-                    {
-                        limitedsupervisionvision?.papers.map((item, index) => (
-                            <PaperCard key={index} title={item.title}
-                                authors={item.authors}
-                                conference={item.conference}
-                                link={item.link}
-                                imageUrl={item.image}
-                            />
-                        ))
-                    }
-                </div>
-            </section>
-            <section className='p-6 mt-[150px] max-w-7xl conatiner mx-auto'>
-                <div id='personcentricvision' className='h-24'></div>
-                <h2 className='my-4 font-oswald tracking-wide font-bold text-3xl underline text-blue-800'>{personcentricvision.title}</h2>
-                <div className='w-full space-y-4 bg-white'>
-                    {
-                        personcentricvision?.papers.map((item, index) => (
-                            <PaperCard key={index} title={item.title}
-                                authors={item.authors}
-                                conference={item.conference}
-                                link={item.link}
-                                imageUrl={item.image}
-                            />
-                        ))
-                    }
-                </div>
-            </section>
-            <section className='p-6 mt-[150px] max-w-7xl conatiner mx-auto'>
-                <div id='synthesisandgeneration' className='h-24'></div>
-                <h2 className='my-4 font-oswald tracking-wide font-bold text-3xl underline text-blue-800'>{synthesisandgeneration.title}</h2>
-                <div className='w-full space-y-4 bg-white'>
-                    {
-                        synthesisandgeneration?.papers.map((item, index) => (
-                            <PaperCard key={index} title={item.title}
-                                authors={item.authors}
-                                conference={item.conference}
-                                link={item.link}
-                                imageUrl={item.image}
-                            />
-                        ))
-                    }
-                </div>
-            </section>
-            <section className='p-6 mt-[150px] max-w-7xl conatiner mx-auto'>
-                <div id='remotesensingandearthvision' className='h-24'></div>
-                <h2 className='my-4 font-oswald tracking-wide font-bold text-3xl underline text-blue-800'>{remotesensingandearthvision.title}</h2>
-                <div className='w-full space-y-4 bg-white'>
-                    {
-                        remotesensingandearthvision?.papers.map((item, index) => (
-                            <PaperCard key={index} title={item.title}
-                                authors={item.authors}
-                                conference={item.conference}
-                                link={item.link}
-                                imageUrl={item.image}
-                            />
-                        ))
-                    }
-                </div>
-            </section>
-            <section className='p-6 mt-[150px] max-w-7xl conatiner mx-auto'>
-                <div id='medicalimageanalysis' className='h-24'></div>
-                <h2 className='my-4 font-oswald tracking-wide font-bold text-3xl underline text-blue-800'>{medicalimageanalysis.title}</h2>
-                <div className='w-full space-y-4 bg-white'>
-                    {
-                        medicalimageanalysis?.papers.map((item, index) => (
-                            <PaperCard key={index} title={item.title}
-                                authors={item.authors}
-                                conference={item.conference}
-                                link={item.link}
-                                imageUrl={item.image}
-                            />
-                        ))
-                    }
-                </div>
-            </section>
+            <div className="container mx-auto px-4 py-12">
+                {sortedYears.map((year) => (
+                    <div key={year} className="mb-12">
+                        <h2 className="text-4xl font-bold text-gray-800 mb-8 border-b-4 border-blue-500 pb-2">
+                            {year}
+                        </h2>
+                        <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+                            {publicationsByYear[year]
+                                .filter(pub => 
+                                    pub.title.toLowerCase().includes(searchTerm.toLowerCase()) ||
+                                    pub.authors.toLowerCase().includes(searchTerm.toLowerCase()) ||
+                                    pub.conference.toLowerCase().includes(searchTerm.toLowerCase())
+                                )
+                                .map((publication) => (
+                                    <PublicationCard 
+                                        key={publication.id} 
+                                        publication={publication} 
+                                    />
+                                ))
+                            }
+                        </div>
+                    </div>
+                ))}
+            </div>
+
             <ScrollToTop />
-
         </div>
     );
 };
 
-export default Publications;
-
-
-const PaperCard = ({ title, authors, conference, link, imageUrl }) => {
+const PublicationCard = ({ publication }) => {
     return (
-        <div className="rounded overflow-hidden bg-white flex flex-col lg:flex-row gap-4">
-            <img className="object-cover aspect-video" src={imageUrl} alt={title} />
-
-            <div className="px-6 py-4 flex-1">
-                <div className="font-bold text-xl mb-2 text-blue-800">{title}</div>
-                <p className="text-gray-700 text-base mb-4">{authors}</p>
-                <p className="text-gray-600 text-sm mb-4">{conference}</p>
-                <a
-                    href={link}
-                    target="_blank"
-                    rel="noopener noreferrer"
-                    className="inline-block hover:bg-blue-800 transition-colors duration-300 text-xs border border-gray-500 text-black py-2 px-4 hover:text-white hover:border-transparent"
-                >
-                    Read the Paper
-                </a>
+        <div className="bg-white rounded-lg shadow-md p-6 hover:shadow-lg transition-shadow duration-300 border-l-4 border-blue-500">
+            <div className="space-y-3">
+                <h3 className="text-xl font-bold text-gray-900 hover:text-blue-800 transition-colors">
+                    {publication.title}
+                </h3>
+                <div className="text-gray-600 text-sm">
+                    <p className="font-medium">{publication.authors}</p>
+                    <div className="flex items-center justify-between mt-2">
+                        <span className="bg-blue-50 text-blue-800 px-3 py-1 rounded-full text-xs font-semibold">
+                            {publication.conference}
+                        </span>
+                        <a 
+                            href={publication.link}
+                            target="_blank"
+                            rel="noopener noreferrer"
+                            className="text-blue-600 hover:text-blue-800 text-sm flex items-center group"
+                        >
+                            View Paper
+                            <svg 
+                                xmlns="http://www.w3.org/2000/svg" 
+                                className="h-4 w-4 ml-1 group-hover:translate-x-1 transition-transform" 
+                                fill="none" 
+                                viewBox="0 0 24 24" 
+                                stroke="currentColor"
+                            >
+                                <path 
+                                    strokeLinecap="round" 
+                                    strokeLinejoin="round" 
+                                    strokeWidth={2} 
+                                    d="M14 5l7 7m0 0l-7 7m7-7H3" 
+                                />
+                            </svg>
+                        </a>
+                    </div>
+                </div>
             </div>
         </div>
     );
 };
-
+export default Publications;

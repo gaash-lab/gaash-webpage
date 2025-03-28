@@ -1,41 +1,92 @@
 import React from 'react';
-import { Mail, Phone } from "lucide-react";
+import { Mail, Phone, MapPin, Clock } from "lucide-react";
 import banner_contact from './../assets/banner-contact.avif';
 
 const Contact = () => {
     return (
-        <div className="w-full">
-            <section className="w-full flex flex-col items-center text-center">
-                <div
-                    className="w-full h-[400px] bg-cover bg-center mt-4 z-30 relative"
-                    style={{
-                        backgroundImage: `url("${banner_contact}")`,
-                    }}
-                />
-            </section>
+        <div className="relative w-full">
+            <div
+                className="w-full h-[400px] bg-cover bg-center relative z-10"
+                style={{
+                    backgroundImage: `linear-gradient(rgba(0,0,0,0.6), rgba(0,0,0,0.5)), url("${banner_contact}")`,
+                }}
+            >
+                <div className="absolute inset-0 flex items-center justify-center">
+                    <h1 className="text-4xl md:text-5xl font-bold text-white tracking-wide">
+                        Contact Us
+                    </h1>
+                </div>
+            </div>
 
-            <section className="w-full max-w-4xl mx-auto bg-white p-6 sm:p-8 md:p-10 lg:p-16 -mt-32 md:-mt-40 z-40 relative text-center">
-                <h2 className="text-2xl sm:text-3xl md:text-4xl font-bold mb-6 md:mb-8 font-oswald tracking-wider">
-                    Contacts
-                </h2>
+            {/* Contact Information  */}
+            <section className="w-full max-w-4xl mx-auto bg-white p-6 sm:p-8 md:p-10 lg:p-16 -mt-32 md:-mt-40 z-20 relative text-center">
+                <div className="grid md:grid-cols-2 gap-8">
+                    <div className="space-y-6">
+                        <div className="bg-blue-50 p-6 rounded-lg">
+                            <div className="flex items-center mb-4">
+                                <MapPin className="w-8 h-8 text-blue-700 mr-4" />
+                                <h3 className="text-2xl font-bold text-gray-800">
+                                    Our Location
+                                </h3>
+                            </div>
+                            <p className="text-gray-600 leading-relaxed text-left">
+                                <span className="font-semibold text-blue-700">Computer Vision Lab at MBZUAI</span>
+                                <br />
+                                Masdar City, Building 1B, 2nd Floor
+                                <br />
+                                Abu Dhabi, UAE
+                            </p>
+                        </div>
 
-                <p className="leading-7 sm:leading-8 md:leading-9 text-justify px-4 sm:px-6 md:px-8 text-base sm:text-lg mt-6">
-                    <span className="font-semibold text-blue-700">Computer Vision Lab at MBZUAI</span> <br />
-                    Masdar City, Building 1B, 2nd Floor, Abu Dhabi, UAE.
-                </p>
-                <p className="leading-7 sm:leading-8 md:leading-9 text-justify px-4 sm:px-6 md:px-8 text-base sm:text-lg mt-4">
-                    Enter Building 1B close to Multipurpose Hall and take the stairs/elevator to Floor 2.
-                </p>
-                <p className="font-semibold mt-6 text-lg sm:text-xl">9:00 to 17:00 Monday to Friday</p>
-
-                <div className="space-y-4 sm:space-y-6 md:space-y-8 px-4 sm:px-6 md:px-8 mt-10">
-                    <div className="flex items-center justify-left space-x-4">
-                        <Mail className="text-blue-700 w-6 h-6 sm:w-7 sm:h-7" />
-                        <p className="text-base sm:text-lg">example@domain.com</p>
+                        <div className="bg-green-50 p-6 rounded-lg">
+                            <div className="flex items-center mb-4">
+                                <Clock className="w-8 h-8 text-green-700 mr-4" />
+                                <h3 className="text-2xl font-bold text-gray-800">
+                                    Operating Hours
+                                </h3>
+                            </div>
+                            <p className="text-gray-600 font-medium text-left">
+                                Monday to Friday
+                                <br />
+                                9:00 AM to 5:00 PM
+                            </p>
+                        </div>
                     </div>
-                    <div className="flex items-center justify-left space-x-4">
-                        <Phone className="text-blue-700 w-6 h-6 sm:w-7 sm:h-7" />
-                        <p className="text-base sm:text-lg">+XXX XXX XXX XXXX</p>
+
+                    <div className="space-y-6">
+                        <div className="bg-indigo-50 p-6 rounded-lg">
+                            <div className="flex items-center mb-4">
+                                <Mail className="w-8 h-8 text-indigo-700 mr-4" />
+                                <h3 className="text-2xl font-bold text-gray-800">
+                                    Email Address
+                                </h3>
+                            </div>
+                            <div className="flex items-center text-left">
+                                <a 
+                                    href="mailto:example@domain.com" 
+                                    className="text-gray-600 hover:text-indigo-700 transition-colors"
+                                >
+                                    example@domain.com
+                                </a>
+                            </div>
+                        </div>
+
+                        <div className="bg-purple-50 p-6 rounded-lg">
+                            <div className="flex items-center mb-4">
+                                <Phone className="w-8 h-8 text-purple-700 mr-4" />
+                                <h3 className="text-2xl font-bold text-gray-800">
+                                    Contact Number
+                                </h3>
+                            </div>
+                            <div className="flex items-center text-left">
+                                <a 
+                                    href="tel:+XXXXXXXXXX" 
+                                    className="text-gray-600 hover:text-purple-700 transition-colors"
+                                >
+                                    +XXX XXX XXX XXXX
+                                </a>
+                            </div>
+                        </div>
                     </div>
                 </div>
             </section>

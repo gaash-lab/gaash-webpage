@@ -1,76 +1,184 @@
-import React from "react";
+import React, { useState } from "react";
 import banner_research from './../assets/banner-research.avif'
-import Button from "../components/Button";
+import ScrollToTop from "../components/ScrollToTop";
+import multi_modal from "../assets/research/multi_modal.jpg"
+import med_image from "../assets/research/med_image.jpg"
+import person_centric from "../assets/research/person_centric.jpg"
+import remote_sensing from "../assets/research/remote_sensing.jpg"
+import synthesis from "../assets/research/synthesis.jpg"
+
+const researchInterests = [
+    {
+        id: 1,
+        title: "Multi-Modal Learning",
+        description: "Exploring advanced techniques for integrating and learning across multiple modalities, including vision, text, and audio data.",
+        category: "Machine Learning",
+        projectCount: 12,
+        img: multi_modal,
+        detailLink: "/research/multi-modal-learning"
+    },
+    {
+        id: 2,
+        title: "Person-Centric Vision",
+        description: "Developing algorithms for human-focused computer vision applications, including pose estimation, behavior analysis, and human-computer interaction.",
+        category: "Computer Vision",
+        projectCount: 8,
+        img: person_centric,
+        detailLink: "/research/person-centric-vision"
+    },
+    {
+        id: 3,
+        title: "Limited Supervision Vision",
+        description: "Investigating novel approaches to machine learning with minimal labeled data, including semi-supervised and weakly supervised learning techniques.",
+        category: "Machine Learning",
+        projectCount: 6,
+        img: med_image,
+        detailLink: "/research/limited-supervision"
+    },
+    {
+        id: 4,
+        title: "Remote Sensing and Earth Vision",
+        description: "Applying advanced computer vision and machine learning techniques to satellite imagery, environmental monitoring, and geospatial analysis.",
+        category: "Geospatial Analytics",
+        projectCount: 10,
+        img: remote_sensing,
+        detailLink: "/research/remote-sensing"
+    },
+    {
+        id: 5,
+        title: "Medical Image Analysis",
+        description: "Developing cutting-edge AI techniques for medical image interpretation, diagnostic support, and healthcare insights.",
+        category: "Healthcare AI",
+        projectCount: 7,
+        img: med_image,
+        detailLink: "/research/medical-image-analysis"
+    },
+    {
+        id: 6,
+        title: "Synthesis and Generation",
+        description: "Exploring generative models for creating and manipulating visual content, including deep learning-based image and video synthesis.",
+        category: "Generative AI",
+        projectCount: 9,
+        img: synthesis,
+        detailLink: "/research/synthesis-generation"
+    }
+];
 
 const Research = () => {
-    const researchData = [
-        {
-            title: "Multi-modal Learning",
-            description:
-                "Deep learning with multiple modalities of data including images, videos, text and audio. Our team at IVAL explores how multi-modal understanding can be used for improving generalization in vision applications such as open-vocabulary object detection, and visual question-answering.",
-        },
-        {
-            title: "Remote Sensing and Earth Vision",
-            description:
-                "Remote sensing data provide an unbiased, uninterrupted and borderless view of human activities and natural processes. Powered by data collected from diverse satellite systems, deep-learning models can be used to gain insight to guide targeted actions in remote locations.",
-        },
-        {
-            title: "Person Centric Vision",
-            description:
-                "Under the theme of human-centric visual analysis using deep learning, our team at IVAL explores problems including face detection, facial landmark localization, pedestrian detection and abnormal activity detection.",
-        },
-        {
-            title: "Synthesis and Generation",
-            description:
-                "Our team at IVAL researches new methods for generating high-resolution, realistic images and videos, and generation of synthetic data. Our team also works on fundamental concepts in generative models.",
-        },
-        {
-            title: "Visual Recognition with Limited Supervision",
-            description:
-                "The theme explores various generic vision applications using deep learning with limited supervision including semi-supervised, weakly-supervised, few-shot, zero-shot, and self-supervised learning.",
-        },
-        {
-            title: "Medical Image Analysis",
-            description:
-                "Our team at IVAL investigates real-world healthcare problems using medical imaging with deep learning and computer vision. We are also interested in investigating fundamental concepts in medical imaging such as multi-organ segmentation, medical image generation and deep-learning architectures for medical imaging.",
-        },
+    const [selectedCategory, setSelectedCategory] = useState('All');
+
+    // Get unique categories
+    const categories = [
+        'All', 
+        ...new Set(researchInterests.map(interest => interest.category))
     ];
+
+    const filteredResearch = researchInterests.filter(interest => 
+        (selectedCategory === 'All' || interest.category === selectedCategory)
+    );
+
     return (
-        <div className="w-full">
-            <section className="w-full flex flex-col items-center text-center">
-                <div
-                    className="w-full h-[400px] bg-cover bg-center mt-4 z-30 relative"
-                    style={{
-                        backgroundImage: `url("${banner_research}")`,
-                    }}
-                />
-            </section>
+        <div className="bg-gray-50 min-h-screen">
+            <div 
+                className="h-[300px] bg-cover bg-center relative flex items-center justify-center"
+                style={{
+                    backgroundImage: `linear-gradient(rgba(0,0,0,0.6), rgba(0,0,0,0.6)), url("${banner_research}")`,
+                }}
+            >
+                <div className="text-center px-4">
+                    <h1 className="text-5xl font-bold text-white mb-6">
+                        Research Interests
+                    </h1>
+                </div>
+            </div>
 
-            <section className="w-full max-w-4xl mx-auto bg-white p-6 sm:p-8 md:p-10 lg:p-16 -mt-32 md:-mt-40 z-40 relative text-center">
-                <h2 className="text-2xl sm:text-3xl md:text-4xl font-bold text-center mb-6 md:mb-8 font-oswald tracking-wider">
-                    Research
-                </h2>
-                <p className="leading-7 sm:leading-8 md:leading-9 text-justify px-4 sm:px-6 md:px-8 text-base sm:text-normal md:text-lg">
-                    Members of IVAL at MBZUAI conduct research primarily in Multi-modal learning, Remote sensing and earth vision, Person centric vision, Synthesis and Generation, Visual Recognition with Limited Supervision and Medical Image Analysis
+            <div className="container mx-auto px-4 py-6 flex flex-wrap justify-center gap-2">
+                {categories.map((category) => (
+                    <button
+                        key={category}
+                        className={`
+                            px-4 py-2 rounded-full text-sm font-medium transition-colors
+                            ${selectedCategory === category 
+                                ? 'bg-blue-600 text-white' 
+                                : 'bg-gray-200 text-gray-700 hover:bg-blue-100'}
+                        `}
+                        onClick={() => setSelectedCategory(category)}
+                    >
+                        {category}
+                    </button>
+                ))}
+            </div>
 
-                </p>
-            </section>
-
-            <section className="w-full max-w-4xl mx-auto mt-10">
-                <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
-                    {researchData.map((item, index) => (
-                        <div key={index} className="p-6 bg-indigo-100 space-y-4 text-center group">
-                            <h3 className="font-bold text-blue-800 text-2xl text-center font-oswald">{item.title}</h3>
-                            <p className="text-justify text-sm">{item.description}</p>
-                            <button className="py-2 px-6 text-xs border border-gray-500 rounded-full group-hover:bg-blue-800 group-hover:text-white transition-colors duration-300 group-hover:border-transparent">Read More</button>
-                        </div>
+            <div className="container mx-auto px-4 py-8">
+                <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+                    {filteredResearch.map((interest) => (
+                        <ResearchCard 
+                            key={interest.id} 
+                            research={interest} 
+                        />
                     ))}
+                </div>
+            </div>
 
+            <ScrollToTop />
+        </div>
+    );
+};
+
+const ResearchCard = ({ research }) => {
+    return (
+        <div className="bg-white rounded-xl shadow-lg overflow-hidden transform transition-all duration-300 hover:shadow-xl hover:-translate-y-2">
+            {/* Image */}
+            <div className="h-48 overflow-hidden">
+                <img 
+                    src={research.img} 
+                    alt={research.title} 
+                    loading="lazy"
+                    className="w-full h-full object-cover"
+                />
+            </div>
+
+            {/* Content */}
+            <div className="p-6 flex flex-col">
+                <h3 className="text-xl font-bold text-gray-900 mb-3">
+                    {research.title}
+                </h3>
+                <p className="text-gray-600 text-sm mb-4 flex-grow">
+                    {research.description}
+                </p>
+
+                {/* Project Count and Category */}
+                <div className="flex justify-between items-center mb-4">
+                    <div className="flex items-center space-x-2">
+                        <span className="bg-blue-100 text-blue-800 text-xs px-3 py-1 rounded-full">
+                            {research.category}
+                        </span>
+                        <span className="bg-green-100 text-green-800 text-xs px-3 py-1 rounded-full">
+                            {research.projectCount} Projects
+                        </span>
+                    </div>
                 </div>
-                <div className="text-center my-10">
-                    <Button onClick={() => window.location.href = '/publications'}>See Publications</Button>
-                </div>
-            </section>
+
+                {/* Explore More Button */}
+                <a 
+                    href={research.detailLink}
+                    className="w-full text-center py-2 px-4 bg-blue-600 text-white rounded-lg hover:bg-blue-700 transition-colors flex items-center justify-center"
+                >
+                    Explore More
+                    <svg 
+                        xmlns="http://www.w3.org/2000/svg" 
+                        className="h-5 w-5 ml-2" 
+                        viewBox="0 0 20 20" 
+                        fill="currentColor"
+                    >
+                        <path 
+                            fillRule="evenodd" 
+                            d="M10.293 5.293a1 1 0 011.414 0l4 4a1 1 0 010 1.414l-4 4a1 1 0 01-1.414-1.414L12.586 11H5a1 1 0 110-2h7.586l-2.293-2.293a1 1 0 010-1.414z" 
+                            clipRule="evenodd" 
+                        />
+                    </svg>
+                </a>
+            </div>
         </div>
     );
 };
