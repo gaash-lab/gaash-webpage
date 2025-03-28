@@ -120,7 +120,7 @@ export const facultyMembers = [
         email: "alice.johnson@example.com",
         website: "https://alicejohnson.com",
         scholar: "https://scholar.google.com/citations?user=alice",
-        image: "https://placehold.co/200x300"
+        image: "person.jpeg"
     },
     {
         name: "Dr. Robert Smith",
@@ -128,7 +128,7 @@ export const facultyMembers = [
         email: "robert.smith@example.com",
         website: "https://robertsmith.ai",
         scholar: "https://scholar.google.com/citations?user=robert",
-        image: "https://placehold.co/200x300"
+        image: "person.jpeg"
     },
     {
         name: "Dr. Emily Carter",
@@ -136,7 +136,7 @@ export const facultyMembers = [
         email: "emily.carter@example.com",
         website: "https://emilycarterds.com",
         scholar: "https://scholar.google.com/citations?user=emily",
-        image: "https://placehold.co/200x300"
+        image: "person.jpeg"
     },
     {
         name: "Dr. Emily Carter",
@@ -144,7 +144,7 @@ export const facultyMembers = [
         email: "emily.carter@example.com",
         website: "https://emilycarterds.com",
         scholar: "https://scholar.google.com/citations?user=emily",
-        image: "https://placehold.co/200x300"
+        image: "person.jpeg"
     },
     {
         name: "Dr. Emily Carter",
@@ -152,6 +152,6 @@ export const facultyMembers = [
         email: "emily.carter@example.com",
         website: "https://emilycarterds.com",
         scholar: "https://scholar.google.com/citations?user=emily",
-        image: "https://placehold.co/200x300"
+        image: "person.jpeg"
     },
 ];

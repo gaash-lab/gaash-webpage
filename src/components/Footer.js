@@ -30,12 +30,12 @@ const Footer = () => {
                                 href="mailto:ival@mbzuai.ac.ae" 
                                 className="hover:text-blue-200 transition"
                             >
-                                ival@mbzuai.ac.ae
+                                email here
                             </a>
                         </div>
                         <div className="flex items-center space-x-3">
                             <Phone className="w-5 h-5 text-blue-300" />
-                            <span>+971 XX XXX XXXX</span>
+                            <span>phone number here</span>
                         </div>
                     </div>
                 </div>
