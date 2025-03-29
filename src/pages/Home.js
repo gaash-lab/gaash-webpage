@@ -6,12 +6,16 @@ import { Autoplay, Pagination, Navigation } from 'swiper/modules';
 import 'swiper/css';
 import 'swiper/css/pagination';
 import 'swiper/css/navigation';
+import lab1 from "../assets/lab-pics/lab1.jpg";
+import lab2 from "../assets/lab-pics/lab2.jpg";
+import lab3 from "../assets/lab-pics/lab3.jpg";
+import lab4 from "../assets/lab-pics/lab4.jpg";
 
 const labImages = [
-    "lab-pics/lab1.jpg",
-    "lab-pics/lab2.jpg",
-    "lab-pics/lab3.jpg",
-    "lab-pics/lab4.jpg"
+    lab1,
+    lab2,
+    lab3,
+    lab4
 ];
 
 const recentNews = [
@@ -43,7 +47,7 @@ const HomePage = () => {
                 <div className="grid md:grid-cols-2 gap-12 items-center">
                     {/* Lab Description */}
                     <div className="space-y-6">
-                        <h1 className="text-4xl md:text-5xl font-bold text-blue-900 mb-6">
+                        <h1 className="text-3xl md:text-4xl font-bold text-blue-900 mb-6">
                             Intelligent Visual Analytics Lab
                         </h1>
                         <h2 className="text-2xl md:text-3xl font-semibold text-blue-700">
