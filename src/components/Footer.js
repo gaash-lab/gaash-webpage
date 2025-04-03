@@ -27,15 +27,15 @@ const Footer = () => {
                         <div className="flex items-center space-x-3">
                             <Mail className="w-5 h-5 text-blue-300" />
                             <a 
-                                href="mailto:ival@mbzuai.ac.ae" 
+                                href="mailto:janibbashir@nitsri.ac.in" 
                                 className="hover:text-blue-200 transition"
                             >
-                                email here
+                                janibbashir@nitsri.ac.in
                             </a>
                         </div>
                         <div className="flex items-center space-x-3">
                             <Phone className="w-5 h-5 text-blue-300" />
-                            <span>phone number here</span>
+                            <span>+91 8825099229</span>
                         </div>
                     </div>
                 </div>
@@ -48,7 +48,7 @@ const Footer = () => {
                             { to: "/", label: "Home" },
                             { to: "/research", label: "Research" },
                             { to: "/publications", label: "Publications" },
-                            { to: "/about", label: "About" },
+                            { to: "/team", label: "Team" },
                             { to: "/news", label: "News" },
                             { to: "/contact", label: "Contact" }
                         ].map((link) => (
@@ -66,7 +66,7 @@ const Footer = () => {
                 {/* Newsletter Signup */}
                 <div>
                     <h3 className="text-2xl font-bold mb-6">Stay Updated</h3>
-                    <div className="flex">
+                    {/*<div className="flex">
                         <input 
                             type="email" 
                             placeholder="Enter your email" 
@@ -77,14 +77,14 @@ const Footer = () => {
                         >
                             <Send className="w-5 h-5" />
                         </button>
-                    </div>
+                    </div> */}
 
                     {/* Social Media Links */}
                     <div className="mt-6 flex space-x-4">
                         {[
                             { icon: Twitter, link: "#" },
                             { icon: Linkedin, link: "#" },
-                            { icon: Github, link: "#" }
+                            { icon: Github, link: "https://github.com/gaash-lab" }
                         ].map((social, index) => (
                             <a 
                                 key={index} 
@@ -103,8 +103,8 @@ const Footer = () => {
             {/* Copyright */}
             <div className="container mx-auto px-4 mt-12 pt-6 border-t border-blue-700 text-center">
                 <p className="text-blue-200">
-                    © {currentYear} Intelligent Visual Analytics Lab (IVAL). 
-                    All Rights Reserved.
+                    © {currentYear} GAASH Lab. 
+                    All Rights Reserved, designed by Tavaheed Tariq
                 </p>
             </div>
         </footer>

@@ -10,34 +10,13 @@ import lab1 from "../assets/lab-pics/lab1.jpg";
 import lab2 from "../assets/lab-pics/lab2.jpg";
 import lab3 from "../assets/lab-pics/lab3.jpg";
 import lab4 from "../assets/lab-pics/lab4.jpg";
+import { highlights, recentNews } from "../data/constants";
 
 const labImages = [
     lab1,
     lab2,
     lab3,
     lab4
-];
-
-const recentNews = [
-    { date: "Mar 15, 2024", text: "Breakthrough in Computer Vision Algorithm" },
-    { date: "Feb 22, 2024", text: "Research Paper Accepted at Top-Tier Conference" },
-    { date: "Jan 10, 2024", text: "New Grant Awarded for AI Research" },
-    { date: "Dec 05, 2023", text: "Lab Hosts International Workshop on Visual Analytics" }
-];
-
-const highlights = [
-    {
-        title: "Cutting-Edge Research",
-        subtitle: "Advanced Visual Analytics",
-        description: "Our lab is at the forefront of computer vision research, developing innovative solutions for complex visual understanding challenges.",
-        link: "/research"
-    },
-    {
-        title: "Interdisciplinary Approach",
-        subtitle: "Bridging Technology and Insight",
-        description: "We combine machine learning, computer vision, and domain expertise to solve real-world problems across various industries.",
-        link: "/about"
-    }
 ];
 
 const HomePage = () => {
@@ -48,10 +27,10 @@ const HomePage = () => {
                     {/* Lab Description */}
                     <div className="space-y-6">
                         <h1 className="text-3xl md:text-4xl font-bold text-blue-900 mb-6">
-                            Intelligent Visual Analytics Lab
+                            GAASH Lab
                         </h1>
                         <h2 className="text-2xl md:text-3xl font-semibold text-blue-700">
-                            Computer Vision Lab @GAASH
+                            AI Lab @GAASH
                         </h2>
                         <p className="text-gray-700 leading-relaxed text-lg">
                             Welcome to the <span className="text-blue-700">Intelligent Visual Analytics Lab (IVAL)</span> , part of the Department of Computer Vision at MBZUAI.
@@ -66,7 +45,7 @@ const HomePage = () => {
                             <Link 
                                 className="bg-blue-600 text-white px-6 py-3 rounded-lg 
                                 hover:bg-blue-700 transition flex items-center group"
-                                to={"/about"}
+                                to={"/research"}
                             >
                                 Learn More 
                                 <ArrowRight 
@@ -152,7 +131,7 @@ const HomePage = () => {
                                 <p className="text-gray-600 mb-6">
                                     {highlight.description}
                                 </p>
-                                <Link to={highlight.link}>
+                                {/* <Link to={highlight.link}>
                                     <button 
                                         className="bg-blue-500 text-white px-5 py-2 rounded-lg 
                                         hover:bg-blue-600 transition flex items-center group"
@@ -162,7 +141,7 @@ const HomePage = () => {
                                             className="ml-2 w-4 h-4 group-hover:translate-x-1 transition" 
                                         />
                                     </button>
-                                </Link>
+                                </Link> */}
                             </div>
                         ))}
                     </div>

@@ -63,10 +63,10 @@ const Contact = () => {
                             </div>
                             <div className="flex items-center text-left">
                                 <a 
-                                    href="mailto:example@domain.com" 
+                                    href="mailto:janibbashir@nitsri.ac.in" 
                                     className="text-gray-600 hover:text-indigo-700 transition-colors"
                                 >
-                                    example@domain.com
+                                    janibbashir@nitsri.ac.in
                                 </a>
                             </div>
                         </div>
@@ -80,10 +80,10 @@ const Contact = () => {
                             </div>
                             <div className="flex items-center text-left">
                                 <a 
-                                    href="tel:+XXXXXXXXXX" 
+                                    href="tel:+918825099229" 
                                     className="text-gray-600 hover:text-purple-700 transition-colors"
                                 >
-                                    +XXX XXX XXX XXXX
+                                    +91 8825099229
                                 </a>
                             </div>
                         </div>

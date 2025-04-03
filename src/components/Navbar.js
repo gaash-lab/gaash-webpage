@@ -17,7 +17,7 @@ const Navbar = () => {
     const navLinks = [
         { to: "/", label: "Home" },
         { to: "/news", label: "News" },
-        { to: "/about", label: "About" },
+        { to: "/team", label: "Team" },
         { to: "/research", label: "Research" },
         { to: "/publications", label: "Publications" },
         { to: "/contact", label: "Contact" }
@@ -49,7 +49,7 @@ const Navbar = () => {
                     ))}
                     
                     {/* Search Icon */}
-                    <li>
+                    {/* <li>
                         <button 
                             onClick={toggleSearch} 
                             className="text-gray-700 hover:text-blue-600 transition-colors"
@@ -57,7 +57,7 @@ const Navbar = () => {
                         >
                             <Search className="w-5 h-5" />
                         </button>
-                    </li>
+                    </li> */}
                 </ul>
 
                 {/* Mobile Menu Toggle */}
@@ -112,7 +112,7 @@ const Navbar = () => {
                 </ul>
             </div>
 
-            {/* Search Bar */}
+            {/* Search Bar
             {isSearchOpen && (
                 <div className="fixed top-0 left-0 w-full bg-white shadow-md z-40 transition-all duration-300">
                     <div className="container mx-auto max-w-7xl px-4 py-4 flex items-center">
@@ -132,7 +132,7 @@ const Navbar = () => {
                         </button>
                     </div>
                 </div>
-            )}
+            )} */}
         </header>
     );
 };
