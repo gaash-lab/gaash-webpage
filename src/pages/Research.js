@@ -1,68 +1,8 @@
 import React, { useState } from "react";
 import banner_research from './../assets/banner-research.avif'
 import ScrollToTop from "../components/ScrollToTop";
-import multi_modal from "../assets/research/multi_modal.jpg"
-import med_image from "../assets/research/med_image.jpg"
-import person_centric from "../assets/research/person_centric.jpg"
-import remote_sensing from "../assets/research/remote_sensing.jpg"
-import synthesis from "../assets/research/synthesis.jpg"
-
-const researchInterests = [
-    {
-        id: 1,
-        title: "Multi-Modal Learning",
-        description: "Exploring advanced techniques for integrating and learning across multiple modalities, including vision, text, and audio data.",
-        category: "Machine Learning",
-        projectCount: 12,
-        img: multi_modal,
-        detailLink: "/research/multi-modal-learning"
-    },
-    {
-        id: 2,
-        title: "Person-Centric Vision",
-        description: "Developing algorithms for human-focused computer vision applications, including pose estimation, behavior analysis, and human-computer interaction.",
-        category: "Computer Vision",
-        projectCount: 8,
-        img: person_centric,
-        detailLink: "/research/person-centric-vision"
-    },
-    {
-        id: 3,
-        title: "Limited Supervision Vision",
-        description: "Investigating novel approaches to machine learning with minimal labeled data, including semi-supervised and weakly supervised learning techniques.",
-        category: "Machine Learning",
-        projectCount: 6,
-        img: med_image,
-        detailLink: "/research/limited-supervision"
-    },
-    {
-        id: 4,
-        title: "Remote Sensing and Earth Vision",
-        description: "Applying advanced computer vision and machine learning techniques to satellite imagery, environmental monitoring, and geospatial analysis.",
-        category: "Geospatial Analytics",
-        projectCount: 10,
-        img: remote_sensing,
-        detailLink: "/research/remote-sensing"
-    },
-    {
-        id: 5,
-        title: "Medical Image Analysis",
-        description: "Developing cutting-edge AI techniques for medical image interpretation, diagnostic support, and healthcare insights.",
-        category: "Healthcare AI",
-        projectCount: 7,
-        img: med_image,
-        detailLink: "/research/medical-image-analysis"
-    },
-    {
-        id: 6,
-        title: "Synthesis and Generation",
-        description: "Exploring generative models for creating and manipulating visual content, including deep learning-based image and video synthesis.",
-        category: "Generative AI",
-        projectCount: 9,
-        img: synthesis,
-        detailLink: "/research/synthesis-generation"
-    }
-];
+import {researchInterests} from "../data/constants"
+import { Link } from "react-router-dom";
 
 const Research = () => {
     const [selectedCategory, setSelectedCategory] = useState('All');
@@ -160,8 +100,8 @@ const ResearchCard = ({ research }) => {
                 </div>
 
                 {/* Explore More Button */}
-                <a 
-                    href={research.detailLink}
+                <Link 
+                    to={research.detailLink}
                     className="w-full text-center py-2 px-4 bg-blue-600 text-white rounded-lg hover:bg-blue-700 transition-colors flex items-center justify-center"
                 >
                     Explore More
@@ -177,7 +117,7 @@ const ResearchCard = ({ research }) => {
                             clipRule="evenodd" 
                         />
                     </svg>
-                </a>
+                </Link>
             </div>
         </div>
     );

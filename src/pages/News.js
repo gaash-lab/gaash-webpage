@@ -1,26 +1,8 @@
 import React, { useState } from "react";
 import { ChevronRight, CalendarDays } from "lucide-react";
 import banner_news from './../assets/banner-news.avif';
+import { newsData } from "../data/constants";
 
-// Structured news data with years
-const newsData = {
-    2024: [
-        { date: "Mar 15", text: "Breakthrough in Computer Vision Algorithm Published in Top-Tier Journal" },
-        { date: "Feb 22", text: "Research Paper Accepted at International Conference on AI" },
-        { date: "Jan 10", text: "New Research Grant Awarded for Advanced Visual Analytics" }
-    ],
-    2023: [
-        { date: "Dec 05", text: "Lab Hosts International Workshop on Visual Analytics" },
-        { date: "Oct 17", text: "PhD Student Wins Best Paper Award at Computer Vision Symposium" },
-        { date: "Sep 03", text: "Collaborative Research Project Launched with Tech Industry Leader" },
-        { date: "Jun 22", text: "Groundbreaking Research on AI-Powered Image Recognition" }
-    ],
-    2022: [
-        { date: "Nov 30", text: "Significant Advancement in Machine Learning Algorithms" },
-        { date: "Aug 15", text: "Lab Receives Major Funding for Cutting-Edge Research" },
-        { date: "Apr 02", text: "Publication in Nature Machine Intelligence" }
-    ]
-};
 
 const NewsPage = () => {
     const [activeYear, setActiveYear] = useState(Object.keys(newsData)[0]);
