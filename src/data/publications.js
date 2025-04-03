@@ -6,7 +6,8 @@ export const AllPublications = [
         "conference": "ICDSA 2023",
         "paperLink": "#",
         "codeLink": "#",
-        "year": "2023"
+        "year": "2023",
+        "field": "multi-modal-learning"
     },
     {
         "id": 2,
@@ -15,7 +16,8 @@ export const AllPublications = [
         "conference": "ICMV 2022",
         "paperLink": "#",
         "codeLink": "#",
-        "year": "2022"
+        "year": "2022",
+        "field": "medical-image-analysis"
     },
     {
         "id": 3,
@@ -24,7 +26,8 @@ export const AllPublications = [
         "conference": "Journal of Systems Architecture",
         "paperLink": "#",
         "codeLink": "#",
-        "year": "2021"
+        "year": "2021",
+        "field": "computer-architecture"
     },
     {
         "id": 4,
@@ -33,7 +36,8 @@ export const AllPublications = [
         "conference": "Journal of King Saud University-Computer and Information Sciences",
         "paperLink": "#",
         "codeLink": "#",
-        "year": "2021"
+        "year": "2021",
+        "field": "computer-architecture"
     },
     {
         "id": 5,
@@ -42,7 +46,8 @@ export const AllPublications = [
         "conference": "Computational Management",
         "paperLink": "#",
         "codeLink": "#",
-        "year": "2021"
+        "year": "2021",
+        "field": "distributed-computation"
     },
     {
         "id": 6,
@@ -51,7 +56,8 @@ export const AllPublications = [
         "conference": "ACM International Conference on Parallel Architectures and Compilation Techniques",
         "paperLink": "#",
         "codeLink": "#",
-        "year": "2020"
+        "year": "2020",
+        "field": "computer-architecture"
     },
     {
         "id": 7,
@@ -60,7 +66,8 @@ export const AllPublications = [
         "conference": "NOCS 2020",
         "paperLink": "#",
         "codeLink": "#",
-        "year": "2020"
+        "year": "2020",
+        "field": "computer-architecture"
     },
     {
         "id": 8,
@@ -69,7 +76,8 @@ export const AllPublications = [
         "conference": "JETC 2020",
         "paperLink": "#",
         "codeLink": "#",
-        "year": "2020"
+        "year": "2020",
+        "field": "computer-architecture"
     },
     {
         "id": 9,
@@ -78,7 +86,8 @@ export const AllPublications = [
         "conference": "NOCS 2019",
         "paperLink": "#",
         "codeLink": "#",
-        "year": "2019"
+        "year": "2019",
+        "field": "computer-architecture"
     },
     {
         "id": 10,
@@ -87,7 +96,8 @@ export const AllPublications = [
         "conference": "JETC 2019",
         "paperLink": "#",
         "codeLink": "#",
-        "year": "2019"
+        "year": "2019",
+        "field": "computer-architecture"
     },
     {
         "id": 11,
@@ -96,7 +106,8 @@ export const AllPublications = [
         "conference": "Optics Communications",
         "paperLink": "#",
         "codeLink": "#",
-        "year": "2019"
+        "year": "2019",
+        "field": "computer-architecture"
     },
     {
         "id": 12,
@@ -105,7 +116,8 @@ export const AllPublications = [
         "conference": "Silicon Photonics XIV",
         "paperLink": "#",
         "codeLink": "#",
-        "year": "2019"
+        "year": "2019",
+        "field": "computer-architecture"
     },
     {
         "id": 13,
@@ -114,7 +126,8 @@ export const AllPublications = [
         "conference": "CSUR 2019",
         "paperLink": "#",
         "codeLink": "#",
-        "year": "2019"
+        "year": "2019",
+        "field": "computer-architecture"
     },
     {
         "id": 14,
@@ -123,7 +136,8 @@ export const AllPublications = [
         "conference": "JETC 2019",
         "paperLink": "#",
         "codeLink": "#",
-        "year": "2019"
+        "year": "2019",
+        "field": "computer-architecture"
     },
     {
         "id": 15,
@@ -132,7 +146,8 @@ export const AllPublications = [
         "conference": "ICCD 2017",
         "paperLink": "#",
         "codeLink": "#",
-        "year": "2017"
+        "year": "2017",
+        "field": "computer-architecture"
     },
     {
         "id": 16,
@@ -141,7 +156,8 @@ export const AllPublications = [
         "conference": "PACT 2017",
         "paperLink": "#",
         "codeLink": "#",
-        "year": "2017"
+        "year": "2017",
+        "field": "computer-architecture"
     },
     {
         "id": 17,
@@ -150,7 +166,8 @@ export const AllPublications = [
         "conference": "JETC 2017",
         "paperLink": "#",
         "codeLink": "#",
-        "year": "2017"
+        "year": "2017",
+        "field": "computer-architecture"
     },
     {
         "id": 18,
@@ -159,7 +176,8 @@ export const AllPublications = [
         "conference": "YRS 2024",
         "paperLink": "#",
         "codeLink": "#",
-        "year": "2024"
+        "year": "2024",
+        "field": "multi-modal-learning"
     },
     {
         "id": 19,
@@ -168,7 +186,8 @@ export const AllPublications = [
         "conference": "ICDCN 2025",
         "paperLink": "#",
         "codeLink": "#",
-        "year": "2025"
+        "year": "2025",
+        "field": "distributed-computation"
     },
     {
         "id": 20,
@@ -177,7 +196,8 @@ export const AllPublications = [
         "conference": "Expert Systems with Applications",
         "paperLink": "#",
         "codeLink": "#",
-        "year": "2024"
+        "year": "2024",
+        "field": "distributed-computation"
     },
     {
         "id": 21,
@@ -186,7 +206,8 @@ export const AllPublications = [
         "conference": "ACM Trans. Intell. Syst. Technol.",
         "paperLink": "https://doi.org/10.1145/3675403",
         "codeLink": "#",
-        "year": "2024"
+        "year": "2024",
+        "field": "distributed-computation"
     },
     {
         "id": 22,
@@ -195,7 +216,8 @@ export const AllPublications = [
         "conference": "WACV 2024",
         "paperLink": "https://doi.org/10.1109/WACV57701.2024.00061",
         "codeLink": "#",
-        "year": "2024"
+        "year": "2024",
+        "field": "large-langueage-modelling"
     },
     {
         "id": 23,
@@ -204,7 +226,8 @@ export const AllPublications = [
         "conference": "CODS-COMAD 2024",
         "paperLink": "https://dl.acm.org/doi/abs/10.1145/3632410.3632485",
         "codeLink": "#",
-        "year": "2024"
+        "year": "2024",
+        "field": "distributed-computation"
     },
     {
         "id": 24,
@@ -213,7 +236,8 @@ export const AllPublications = [
         "conference": "CODS-COMAD 2024",
         "paperLink": "https://dl.acm.org/doi/abs/10.1145/3632410.3632480",
         "codeLink": "#",
-        "year": "2024"
+        "year": "2024",
+        "field": "distributed-computation"
     },
     {
         "id": 25,
@@ -222,7 +246,8 @@ export const AllPublications = [
         "conference": "ACM Trans. Intell. Syst. Technol.",
         "paperLink": "https://doi.org/10.1145/3627825",
         "codeLink": "#",
-        "year": "2023"
+        "year": "2023",
+        "field": "distributed-computation"
     },
     {
         "id": 26,
@@ -231,7 +256,8 @@ export const AllPublications = [
         "conference": "Transportation Letters",
         "paperLink": "https://doi.org/10.1080/19427867.2023.2283949",
         "codeLink": "#",
-        "year": "2023"
+        "year": "2023",
+        "field": "multi-modal-learning"
     },
     {
         "id": 27,
@@ -240,7 +266,8 @@ export const AllPublications = [
         "conference": "INCOFT 2022",
         "paperLink": "https://doi.org/10.1109/INCOFT55651.2022.10094365",
         "codeLink": "#",
-        "year": "2022"
+        "year": "2022",
+        "field": "medical-image-analysis"
     },
     {
         "id": 28,
@@ -249,7 +276,8 @@ export const AllPublications = [
         "conference": "Adv. Appl. Probab.",
         "paperLink": "https://doi.org/10.1017/apr.2021.27",
         "codeLink": "#",
-        "year": "2022"
+        "year": "2022",
+        "field": "distributed-computation"
     },
     {
         "id": 29,
@@ -258,7 +286,8 @@ export const AllPublications = [
         "conference": "Springer",
         "paperLink": "https://doi.org/10.1007/978-3-030-90087-8_15",
         "codeLink": "#",
-        "year": "2022"
+        "year": "2022",
+        "field": "distributed-computation"
     },
     {
         "id": 30,
@@ -267,7 +296,8 @@ export const AllPublications = [
         "conference": "ACeS 2021",
         "paperLink": "https://doi.org/10.1007/978-981-16-8059-5_5",
         "codeLink": "#",
-        "year": "2021"
+        "year": "2021",
+        "field": "distributed-computation"
     },
     {
         "id": 31,
@@ -276,7 +306,8 @@ export const AllPublications = [
         "conference": "Algorithmica",
         "paperLink": "https://doi.org/10.1007/s00453-021-00845-4",
         "codeLink": "#",
-        "year": "2021"
+        "year": "2021",
+        "field": "distributed-computation"
     },
     {
         "id": 32,
@@ -285,7 +316,8 @@ export const AllPublications = [
         "conference": "Distrib. Comput.",
         "paperLink": "https://doi.org/10.1007/s00446-021-00394-7",
         "codeLink": "#",
-        "year": "2021"
+        "year": "2021",
+        "field": "distributed-computation"
     },
     {
         "id": 33,
@@ -294,7 +326,8 @@ export const AllPublications = [
         "conference": "WSDM 2021",
         "paperLink": "https://doi.org/10.1145/3437963.3441778",
         "codeLink": "#",
-        "year": "2021"
+        "year": "2021",
+        "field": "distributed-computation"
     },
     {
         "id": 34,
@@ -303,7 +336,8 @@ export const AllPublications = [
         "conference": "Inf. Proc. Lett.",
         "paperLink": "https://doi.org/10.1016/j.ipl.2020.106040",
         "codeLink": "#",
-        "year": "2021"
+        "year": "2021",
+        "field": "distributed-computation"
     },
     {
         "id": 35,
@@ -312,7 +346,8 @@ export const AllPublications = [
         "conference": "CODS-COMAD 2021",
         "paperLink": "https://doi.org/10.1145/3430984.3431020",
         "codeLink": "#",
-        "year": "2021"
+        "year": "2021",
+        "field": "distributed-computation"
     },
     {
         "id": 36,
@@ -321,7 +356,8 @@ export const AllPublications = [
         "conference": "SPAA 2020",
         "paperLink": "https://doi.org/10.1145/3350755.3400251",
         "codeLink": "#",
-        "year": "2020"
+        "year": "2020",
+        "field": "distributed-computation"
     },
     {
         "id": 37,
@@ -330,7 +366,8 @@ export const AllPublications = [
         "conference": "ANTS 2019",
         "paperLink": "https://doi.org/10.1109/ANTS47819.2019.9118059",
         "codeLink": "#",
-        "year": "2019"
+        "year": "2019",
+        "field": "distributed-computation"
     },
     {
         "id": 38,
@@ -339,7 +376,8 @@ export const AllPublications = [
         "conference": "IJIT 2024",
         "paperLink": "#",
         "codeLink": "#",
-        "year": "2024"
+        "year": "2024",
+        "field": "computer-architecture"
     },
     {
         "id": 39,
@@ -348,7 +386,8 @@ export const AllPublications = [
         "conference": "JMM 2024",
         "paperLink": "#",
         "codeLink": "#",
-        "year": "2024"
+        "year": "2024",
+        "field": "computer-architecture"
     },
     {
         "id": 40,
@@ -357,7 +396,8 @@ export const AllPublications = [
         "conference": "JSA 2024",
         "paperLink": "#",
         "codeLink": "#",
-        "year": "2024"
+        "year": "2024",
+        "field": "computer-architecture"
     },
     {
         "id": 41,
@@ -366,7 +406,8 @@ export const AllPublications = [
         "conference": "Academic press 2024",
         "paperLink": "#",
         "codeLink": "#",
-        "year": "2024"
+        "year": "2024",
+        "field": "medical-image-analysis"
     },
     {
         "id": 42,
@@ -375,7 +416,8 @@ export const AllPublications = [
         "conference": "CODS-COMAD 2024",
         "paperLink": "https://dl.acm.org/doi/abs/10.1145/3632410.3632485",
         "codeLink": "#",
-        "year": "2024"
+        "year": "2024",
+        "field": "distributed-computation"
     },
     {
         "id": 43,
@@ -384,7 +426,8 @@ export const AllPublications = [
         "conference": "JETC 2023",
         "paperLink": "#",
         "codeLink": "#",
-        "year": "2023"
+        "year": "2023",
+        "field": "computer-architecture"
     },
     {
         "id": 44,
@@ -393,6 +436,7 @@ export const AllPublications = [
         "conference": "MoSICom 2023",
         "paperLink": "",
         "codeLink": "#",
-        "year": "2023"
+        "year": "2023",
+        "field": "computer-architecture"
     }
 ];

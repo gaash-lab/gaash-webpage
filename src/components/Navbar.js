@@ -27,13 +27,15 @@ const Navbar = () => {
         <header className="fixed w-full top-0 z-50 bg-white shadow-md">
             <nav className="container mx-auto flex items-center justify-between px-4 py-4 ">
                 {/* Logo */}
-                <div className="flex items-center">
-                    <img 
-                        src={Logo} 
-                        alt="GAASH Logo" 
-                        className="h-12 w-auto transition-transform hover:scale-105" 
-                    />
-                </div>
+                <Link to="/">
+                    <div className="flex items-center">
+                        <img 
+                            src={Logo} 
+                            alt="GAASH Logo" 
+                            className="h-12 w-auto transition-transform hover:scale-105" 
+                        />
+                    </div>
+                </Link>
 
                 {/* Desktop Navigation */}
                 <ul className="hidden md:flex space-x-6 items-center text-gray-800">

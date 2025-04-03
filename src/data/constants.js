@@ -15,7 +15,7 @@ export const researchInterests = [
         category: "Natural Language Processing",
         projectCount: 8,
         img: "/research/llm.jpg",
-        detailLink: "/research/person-centric-vision"
+        detailLink: "/research/large-langueage-modelling"
     },
     {
         id: 3,
@@ -24,7 +24,7 @@ export const researchInterests = [
         category: "Computer Architecture",
         projectCount: 6,
         img: "/research/ca.jpeg",
-        detailLink: "/research/limited-supervision"
+        detailLink: "/research/computer-architecture"
     },
     {
         id: 4,
@@ -33,7 +33,7 @@ export const researchInterests = [
         category: "Distributed Systems",
         projectCount: 10,
         img: "/research/data.jpg",
-        detailLink: "/research/remote-sensing"
+        detailLink: "/research/distributed-computation"
     },
     {
         id: 5,
