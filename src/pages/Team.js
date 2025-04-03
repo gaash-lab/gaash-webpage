@@ -1,10 +1,11 @@
 import React from 'react';
 import banner_about from './../assets/banner-about.avif';
 import ScrollToTop from '../components/ScrollToTop';
-import { Mail, Globe, BookOpen } from "lucide-react";
-import { facultyMembers, PhdScholars, Students, ExternalCollaborators } from '../data/constants';
+import { Mail, Globe, BookOpen, Linkedin, Github } from "lucide-react";
+import { facultyMembers, PhdScholars, Students, ExternalCollaborators } from '../data/team';
+import noimage from '../assets/noimage.png';
 
-const ProfileCard = ({ name, designation, email, website, scholar, image, type }) => {
+const ProfileCard = ({ name, designation, email, website, scholar, image, type, linkedin, github }) => {
     const cardStyles = {
         faculty: "p-8 border-l-8",
         collaborator: "p-8 border-l-8",
@@ -25,14 +26,12 @@ const ProfileCard = ({ name, designation, email, website, scholar, image, type }
             style={{ width: '400px' }} // Fixed width for cards
         >
             <img
-                src={image}
+                src={image ? image : noimage}
                 alt={name}
                 className={`object-cover rounded-full mx-auto mb-4 border-4 border-blue-500 ${imageStyles[type]}`}
             />
             <h3 className="text-xl font-bold text-gray-900 text-center">{name}</h3>
-            {type !== "student" && (
-                <p className="text-gray-600 text-center mb-4">{designation}</p>
-            )}
+            <p className="text-gray-600 text-center mb-4">{designation}</p>
             <div className="flex justify-center space-x-4 text-blue-600">
                 {email && (
                     <a
@@ -62,6 +61,26 @@ const ProfileCard = ({ name, designation, email, website, scholar, image, type }
                         <BookOpen />
                     </a>
                 )}
+                {linkedin && (
+                    <a
+                        href={linkedin}
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        className="hover:text-blue-800"
+                    >
+                        <Linkedin />
+                    </a>
+                )}
+                {github && (
+                    <a
+                        href={github}
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        className="hover:text-blue-800"
+                    >
+                        <Github />
+                    </a>
+                )}
             </div>
         </div>
     );
@@ -83,7 +102,7 @@ const Team = () => {
             <div className="container mx-auto px-4 py-20">                
                 <section className="mb-12 lg:mb-28">
                     <h3 className="text-3xl font-bold text-center text-gray-700 border-b-4 border-blue-500 pb-2 mb-6">Faculty Members</h3>
-                    <div className="flex flex-wrap justify-center gap-x-16 gap-y-8 lg:gap-y-16 lg:gap-x-60">
+                    <div className="flex flex-wrap justify-center gap-x-16 gap-y-8 lg:gap-y-16 lg:gap-x-[600px]">
                         {facultyMembers.map((member, index) => (
                             <ProfileCard key={index} {...member} />
                         ))}
