@@ -10,7 +10,7 @@ import ResearchDetailPage from "./pages/ResearchDetailPage";
 
 function App() {
   return (
-    <Router>
+    <Router basename="/webpage">
       <Routes>
         <Route path="/" element={<Layout />} >
           <Route index element={<Home />} />

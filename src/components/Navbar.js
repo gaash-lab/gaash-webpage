@@ -29,10 +29,10 @@ const Navbar = () => {
                 {/* Logo */}
                 <Link to="/">
                     <div className="flex items-center">
-                        <img 
-                            src={Logo} 
-                            alt="GAASH Logo" 
-                            className="h-12 w-auto transition-transform hover:scale-105" 
+                        <img
+                            src={Logo}
+                            alt="GAASH Logo"
+                            className="h-12 w-auto transition-transform hover:scale-105"
                         />
                     </div>
                 </Link>
@@ -41,15 +41,15 @@ const Navbar = () => {
                 <ul className="hidden md:flex space-x-6 items-center text-gray-800">
                     {navLinks.map((link) => (
                         <li key={link.to}>
-                            <Link 
-                                to={link.to} 
+                            <Link
+                                to={link.to}
                                 className="font-medium hover:text-blue-600 transition-colors duration-300"
                             >
                                 {link.label}
                             </Link>
                         </li>
                     ))}
-                    
+
                     {/* Search Icon */}
                     {/* <li>
                         <button 
@@ -65,7 +65,7 @@ const Navbar = () => {
                 {/* Mobile Menu Toggle */}
                 <div className="md:hidden flex items-center space-x-4">
                     <button
-                        onClick={toggleSearch} 
+                        onClick={toggleSearch}
                         className="text-gray-700 hover:text-blue-600"
                         aria-label="Open Search"
                     >
@@ -87,9 +87,8 @@ const Navbar = () => {
 
             {/* Mobile Menu Slide-out */}
             <div
-                className={`md:hidden fixed top-0 right-0 h-full w-64 bg-white shadow-xl transform ${
-                    isMenuOpen ? "-translate-x-0" : "translate-x-full"
-                } transition-transform duration-300 ease-in-out z-50`}
+                className={`md:hidden fixed top-0 right-0 h-full w-64 bg-white shadow-xl transform ${isMenuOpen ? "-translate-x-0" : "translate-x-full"
+                    } transition-transform duration-300 ease-in-out z-50`}
             >
                 <button
                     className="absolute top-6 right-6 text-gray-700"
@@ -102,8 +101,8 @@ const Navbar = () => {
                 <ul className="mt-20 space-y-6 px-8 text-gray-800">
                     {navLinks.map((link) => (
                         <li key={link.to}>
-                            <Link 
-                                to={link.to} 
+                            <Link
+                                to={link.to}
                                 className="block py-2 hover:text-blue-600 transition-colors"
                                 onClick={closeMenu}
                             >
