@@ -1,7 +1,7 @@
 {
   "files": {
     "main.css": "./static/css/main.9ba1a8ee.css",
-    "main.js": "./static/js/main.376120e7.js",
+    "main.js": "./static/js/main.1ad0d9bf.js",
     "static/media/lab3.jpg": "./static/media/lab3.97941963f7964d2cecaa.jpg",
     "static/media/lab1.jpg": "./static/media/lab1.c6312b90fadff605646d.jpg",
     "static/media/lab4.jpg": "./static/media/lab4.c40bd84da1d7e386a8cb.jpg",
@@ -9,15 +9,15 @@
     "static/media/banner-publications.avif": "./static/media/banner-publications.248b16ca837d168a28d1.avif",
     "static/media/banner-contact.avif": "./static/media/banner-contact.a2864657da4063be21aa.avif",
     "static/media/banner-news.avif": "./static/media/banner-news.b91b890167ee90a7666d.avif",
-    "static/media/Logo.png": "./static/media/Logo.510cbf65b006caf261e7.png",
+    "static/media/Logo.png": "./static/media/Logo.5edd115011c79a48e04b.png",
     "static/media/banner-about.avif": "./static/media/banner-about.5021b1610b81ce15622f.avif",
     "static/media/banner-research.avif": "./static/media/banner-research.73bc3200cfea20529170.avif",
     "index.html": "./index.html",
     "main.9ba1a8ee.css.map": "./static/css/main.9ba1a8ee.css.map",
-    "main.376120e7.js.map": "./static/js/main.376120e7.js.map"
+    "main.1ad0d9bf.js.map": "./static/js/main.1ad0d9bf.js.map"
   },
   "entrypoints": [
     "static/css/main.9ba1a8ee.css",
-    "static/js/main.376120e7.js"
+    "static/js/main.1ad0d9bf.js"
   ]
 }
