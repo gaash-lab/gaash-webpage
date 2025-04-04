@@ -1,12 +1,11 @@
 {
   "files": {
-    "main.css": "./static/css/main.f0ca0012.css",
-    "main.js": "./static/js/main.4ce054ff.js",
-    "static/media/remote_sensing.jpg": "./static/media/remote_sensing.3861d15b82d818d936aa.jpg",
-    "static/media/person_centric.jpg": "./static/media/person_centric.d957a5e2c208ef6354d7.jpg",
-    "static/media/med_image.jpg": "./static/media/med_image.8db27a5e6a8fe363cad7.jpg",
-    "static/media/synthesis.jpg": "./static/media/synthesis.64f75ae377ab11fd2aab.jpg",
-    "static/media/multi_modal.jpg": "./static/media/multi_modal.2e9ee55f1113f831f6ef.jpg",
+    "main.css": "./static/css/main.9ba1a8ee.css",
+    "main.js": "./static/js/main.376120e7.js",
+    "static/media/lab3.jpg": "./static/media/lab3.97941963f7964d2cecaa.jpg",
+    "static/media/lab1.jpg": "./static/media/lab1.c6312b90fadff605646d.jpg",
+    "static/media/lab4.jpg": "./static/media/lab4.c40bd84da1d7e386a8cb.jpg",
+    "static/media/lab2.jpg": "./static/media/lab2.5bd5ec71a641fd6ce357.jpg",
     "static/media/banner-publications.avif": "./static/media/banner-publications.248b16ca837d168a28d1.avif",
     "static/media/banner-contact.avif": "./static/media/banner-contact.a2864657da4063be21aa.avif",
     "static/media/banner-news.avif": "./static/media/banner-news.b91b890167ee90a7666d.avif",
@@ -14,11 +13,11 @@
     "static/media/banner-about.avif": "./static/media/banner-about.5021b1610b81ce15622f.avif",
     "static/media/banner-research.avif": "./static/media/banner-research.73bc3200cfea20529170.avif",
     "index.html": "./index.html",
-    "main.f0ca0012.css.map": "./static/css/main.f0ca0012.css.map",
-    "main.4ce054ff.js.map": "./static/js/main.4ce054ff.js.map"
+    "main.9ba1a8ee.css.map": "./static/css/main.9ba1a8ee.css.map",
+    "main.376120e7.js.map": "./static/js/main.376120e7.js.map"
   },
   "entrypoints": [
-    "static/css/main.f0ca0012.css",
-    "static/js/main.4ce054ff.js"
+    "static/css/main.9ba1a8ee.css",
+    "static/js/main.376120e7.js"
   ]
 }
