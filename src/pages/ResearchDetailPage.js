@@ -12,6 +12,10 @@ const ResearchDetailPage = () => {
   const [loading, setLoading] = useState(true);
 
   useEffect(() => {
+    window.scrollTo(0, 0); // Scroll to the top
+  }, []);
+  
+  useEffect(() => {
     // Find the research item that matches the slug
     const researchItem = researchInterests.find(
       item => item.detailLink === `/research/${slug}`
@@ -109,20 +113,6 @@ const ResearchDetailPage = () => {
             </div>
           </>
           }
-
-          {/* Applications */}
-          {detail.applications && 
-          <>
-            <h2 className="text-2xl font-bold text-gray-900 mb-4">Applications</h2>
-            <div className="flex flex-wrap gap-3 mb-10">
-              {detail.applications.map((app, index) => (
-                <span key={index} className="bg-gray-100 text-gray-800 px-4 py-2 rounded-full text-sm">
-                  {app}
-                </span>
-              ))}
-            </div>
-          </>
-          }
         </div>
 
         {/* Current Projects */}
@@ -136,19 +126,8 @@ const ResearchDetailPage = () => {
               </div>
             ))}
           </div>
-        </div>}
+        </div>}        
 
-        {/* Publications */}
-        {detail.publications && detail.publications.length > 0 && <div className="bg-white rounded-xl shadow-lg overflow-hidden p-8 mb-12">
-          <h2 className="text-3xl font-bold text-gray-900 mb-6">Recent Publications</h2>
-          <div className="space-y-6">
-            {detail.publications.map((pub, index) => (
-              <PublicationCard key={index} publication={pub} />
-            ))}
-          </div>
-        </div>}
-
-        {/* Contact/Collaboration */}
         <div className="bg-gradient-to-r from-blue-600 to-blue-800 rounded-xl shadow-lg overflow-hidden p-8 text-white">
           <h2 className="text-3xl font-bold mb-6">Interested in Collaboration?</h2>
           <p className="text-lg mb-8 opacity-90">

@@ -20,6 +20,7 @@ const Navbar = () => {
         { to: "/team", label: "Team" },
         { to: "/research", label: "Research" },
         { to: "/publications", label: "Publications" },
+        { to: "/opportunities", label: "Opportunities" },
         { to: "/contact", label: "Contact" }
     ];
 
@@ -64,13 +65,13 @@ const Navbar = () => {
 
                 {/* Mobile Menu Toggle */}
                 <div className="md:hidden flex items-center space-x-4">
-                    <button
+                    {/* <button
                         onClick={toggleSearch} 
                         className="text-gray-700 hover:text-blue-600"
                         aria-label="Open Search"
                     >
                         <Search className="w-6 h-6" />
-                    </button>
+                    </button> */}
                     <button
                         onClick={toggleMenu}
                         className="text-gray-700 hover:text-blue-600"

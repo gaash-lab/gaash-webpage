@@ -1,5 +1,6 @@
 import React from "react";
-import { ExternalLink, Code } from 'lucide-react';
+import { Github, Newspaper } from 'lucide-react';
+
 
 const PublicationCard = ({ publication }) => {
     return (
@@ -15,24 +16,24 @@ const PublicationCard = ({ publication }) => {
                             {publication.conference}
                         </span>
                         <div className="flex space-x-4">
-                            <a 
+                            {publication && publication.paperLink &&<a 
                                 href={publication.paperLink}
                                 target="_blank"
                                 rel="noopener noreferrer"
                                 className="text-blue-600 hover:text-blue-800 text-sm flex items-center group"
                             >
-                                <ExternalLink className="h-5 w-5 mr-1 group-hover:text-blue-800 transition-colors" />
-                                <span className="hidden group-hover:inline">View Paper</span>
-                            </a>
-                            <a 
+                                <Newspaper className="h-5 w-5 mr-1 group-hover:text-blue-800 transition-colors" />
+                                <span>Paper</span>
+                            </a>}
+                            {publication && publication.codeLink && <a 
                                 href={publication.codeLink}
                                 target="_blank"
                                 rel="noopener noreferrer"
                                 className="text-blue-600 hover:text-blue-800 text-sm flex items-center group"
                             >
-                                <Code className="h-5 w-5 mr-1 group-hover:text-blue-800 transition-colors" />
-                                <span className="hidden group-hover:inline">View Code</span>
-                            </a>
+                                <Github className="h-5 w-5 mr-1 group-hover:text-blue-800 transition-colors" />
+                                <span>Code</span>
+                            </a>}
                         </div>
                     </div>
                 </div>

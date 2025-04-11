@@ -7,6 +7,7 @@ import Publications from "./pages/Publications";
 import Contact from "./pages/Contact";
 import Layout from "./Layout";
 import ResearchDetailPage from "./pages/ResearchDetailPage";
+import Opportunities from "./pages/Opportunities";
 
 function App() {
   return (
@@ -19,6 +20,7 @@ function App() {
           <Route path="/research" element={<Research />} />
           <Route path="/research/:slug" element={<ResearchDetailPage />} />
           <Route path="/publications" element={<Publications />} />
+          <Route path="/opportunities" element={<Opportunities />} />
           <Route path="/contact" element={<Contact />} />
         </Route>
       </Routes>
