@@ -1,15 +1,21 @@
-import React, { useState } from "react";
+import React, { useEffect, useState } from "react";
 import { ChevronRight, CalendarDays } from "lucide-react";
 import banner_news from './../assets/banner-news.avif';
 import { newsData } from "../data/constants";
+import { Link } from "react-router-dom";
 
 
 const NewsPage = () => {
-    const [activeYear, setActiveYear] = useState(Object.keys(newsData)[0]);
+    const [activeYear, setActiveYear] = useState(
+        Object.keys(newsData).sort((a, b) => b - a)[0]
+    );
+    useEffect(() => {
+        window.scrollTo(0, 0); // Scroll to the top
+    }, []);
 
     return (
         <div className="w-full bg-gray-50 min-h-screen">
-            <div 
+            <div
                 className="h-[300px] bg-cover bg-center relative flex items-center justify-center"
                 style={{
                     backgroundImage: `linear-gradient(rgba(0,0,0,0.6), rgba(0,0,0,0.6)), url("${banner_news}")`,
@@ -24,14 +30,14 @@ const NewsPage = () => {
 
             <div className="container mx-auto px-4 py-16 max-w-4xl">
                 <div className="flex justify-center space-x-4 mb-12">
-                    {Object.keys(newsData).map((year) => (
+                    {Object.keys(newsData).sort((a, b) => b - a).map((year) => (
                         <button
                             key={year}
                             onClick={() => setActiveYear(year)}
                             className={`
                                 px-6 py-2 rounded-full transition-all duration-300
-                                ${activeYear === year 
-                                    ? 'bg-blue-600 text-white' 
+                                ${activeYear === year
+                                    ? 'bg-blue-600 text-white'
                                     : 'bg-gray-200 text-gray-700 hover:bg-blue-100'}
                             `}
                         >
@@ -42,14 +48,14 @@ const NewsPage = () => {
 
                 <div className="space-y-6">
                     {newsData[activeYear].map((newsItem, index) => (
-                        <div 
-                            key={index} 
+                        <div
+                            key={index}
                             className="bg-white p-6 rounded-lg shadow-md hover:shadow-lg transition-shadow group"
                         >
                             <div className="flex items-center space-x-4">
                                 <div className="flex items-center space-x-2">
-                                    <CalendarDays 
-                                        className="w-5 h-5 text-blue-600 group-hover:text-blue-700 transition" 
+                                    <CalendarDays
+                                        className="w-5 h-5 text-blue-600 group-hover:text-blue-700 transition"
                                     />
                                     <span className="font-semibold text-blue-600">
                                         {newsItem.date}
@@ -60,9 +66,19 @@ const NewsPage = () => {
                                         {newsItem.text}
                                     </p>
                                 </div>
-                                <ChevronRight 
-                                    className="w-5 h-5 text-gray-400 group-hover:translate-x-1 group-hover:text-blue-600 transition" 
-                                />
+                                {newsItem && newsItem.link && <Link
+                                    to={newsItem.link}
+                                    className="text-blue-600 hover:text-blue-800 transition flex items-center"
+                                    target="_blank"
+                                    rel="noopener noreferrer"
+                                >
+                                    <p>Link</p>
+                                    <ChevronRight
+                                        size={30}
+                                        className="w-5 h-5 group-hover:translate-x-1 text-blue-600 transition"
+                                    />
+
+                                </Link>}
                             </div>
                         </div>
                     ))}

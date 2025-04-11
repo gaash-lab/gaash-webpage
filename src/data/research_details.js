@@ -29,8 +29,7 @@ export const researchDetails = {
     //     title: "Multi-modal Knowledge Integration",
     //     description: "Methods for integrating knowledge from diverse sources into unified representational frameworks."
     //   }
-    // ],
-    publications: AllPublications.filter(pub => pub.field === "multi-modal-learning")
+    // ]
   },
   "large-langueage-modelling": {
     title: "Large Language Modelling",
@@ -60,8 +59,7 @@ export const researchDetails = {
         title: "Retrieval-Augmented Generation",
         description: "Enhancing LLMs with external knowledge retrieval for improved factuality."
       }
-    ],
-    publications: AllPublications.filter(pub => pub.field === "large-langueage-modelling")
+    ]
   },
   "computer-architecture": {
     title: "AI Driven Computer Architectures",
@@ -91,8 +89,7 @@ export const researchDetails = {
         title: "Reconfigurable Computing for AI",
         description: "Developing flexible hardware platforms that can adapt to different AI workloads."
       }
-    ],
-    publications: AllPublications.filter(pub => pub.field === "computer-architecture")
+    ]
   },
   "distributed-computation": {
     title: "Data Algorithmics and Distributed Computation",
@@ -122,8 +119,7 @@ export const researchDetails = {
         title: "Privacy-Preserving Distributed Learning",
         description: "Methods for collaborative learning while maintaining data privacy across nodes."
       }
-    ],
-    publications: AllPublications.filter(pub => pub.field === "distributed-computation")
+    ]
   },
   "medical-image-analysis": {
     title: "Medical Image Analysis",
@@ -153,7 +149,6 @@ export const researchDetails = {
         title: "Uncertainty Quantification in Diagnosis",
         description: "Techniques to provide confidence levels for AI-assisted medical diagnoses."
       }
-    ],
-    publications: AllPublications.filter(pub => pub.field === "medical-image-analysis")
+    ]
   }
 };

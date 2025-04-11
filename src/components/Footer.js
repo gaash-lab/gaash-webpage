@@ -22,7 +22,7 @@ const Footer = () => {
                     <div className="space-y-4">
                         <div className="flex items-center space-x-3">
                             <MapPin className="w-5 h-5 text-blue-300" />
-                            <span>MBZUAI, Abu Dhabi, UAE</span>
+                            <span>Department of Information Technology <br/> National Institute of Technology, Srinagar <br/> Jammu and Kashmir - 190006</span>
                         </div>
                         <div className="flex items-center space-x-3">
                             <Mail className="w-5 h-5 text-blue-300" />
@@ -50,6 +50,7 @@ const Footer = () => {
                             { to: "/publications", label: "Publications" },
                             { to: "/team", label: "Team" },
                             { to: "/news", label: "News" },
+                            {to: "/opportunities", label: "Opportunities" },
                             { to: "/contact", label: "Contact" }
                         ].map((link) => (
                             <Link 

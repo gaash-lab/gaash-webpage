@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useEffect, useState } from "react";
 import banner_research from './../assets/banner-research.avif'
 import ScrollToTop from "../components/ScrollToTop";
 import {researchInterests} from "../data/constants"
@@ -7,6 +7,12 @@ import { Link } from "react-router-dom";
 const Research = () => {
     const [selectedCategory, setSelectedCategory] = useState('All');
 
+
+    useEffect(() => {
+        window.scrollTo(0, 0); // Scroll to the top
+      }, []);
+
+    
     // Get unique categories
     const categories = [
         'All', 
@@ -94,7 +100,7 @@ const ResearchCard = ({ research }) => {
                             {research.category}
                         </span>
                         <span className="bg-green-100 text-green-800 text-xs px-3 py-1 rounded-full">
-                            {research.projectCount} Projects
+                            {research.projectCount} {research.projectCount >1 ? "Projects" : "Project"}
                         </span>
                     </div>
                 </div>

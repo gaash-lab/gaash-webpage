@@ -20,6 +20,7 @@ const Navbar = () => {
         { to: "/team", label: "Team" },
         { to: "/research", label: "Research" },
         { to: "/publications", label: "Publications" },
+        { to: "/opportunities", label: "Opportunities" },
         { to: "/contact", label: "Contact" }
     ];
 
@@ -50,6 +51,8 @@ const Navbar = () => {
                         </li>
                     ))}
 
+
+
                     {/* Search Icon */}
                     {/* <li>
                         <button 
@@ -60,11 +63,13 @@ const Navbar = () => {
                             <Search className="w-5 h-5" />
                         </button>
                     </li> */}
+
                 </ul>
 
                 {/* Mobile Menu Toggle */}
                 <div className="md:hidden flex items-center space-x-4">
                     <button
+
                         onClick={toggleSearch}
                         className="text-gray-700 hover:text-blue-600"
                         aria-label="Open Search"
@@ -99,6 +104,19 @@ const Navbar = () => {
                 </button>
 
                 <ul className="mt-20 space-y-6 px-8 text-gray-800">
+                    {navLinks.map((link, index) => (
+                        <li 
+                            key={link.to} 
+                            className={`transform translate-x-full ${
+                                isMenuOpen ? "animate-slide-in" : ""
+                            }`}
+                            style={{ 
+                                animationDelay: `${index * 75}ms`,
+                                animationFillMode: 'forwards'
+                            }}
+                        >
+                            <Link 
+                                to={link.to} 
                     {navLinks.map((link) => (
                         <li key={link.to}>
                             <Link
@@ -112,30 +130,9 @@ const Navbar = () => {
                     ))}
                 </ul>
             </div>
-
-            {/* Search Bar
-            {isSearchOpen && (
-                <div className="fixed top-0 left-0 w-full bg-white shadow-md z-40 transition-all duration-300">
-                    <div className="container mx-auto max-w-7xl px-4 py-4 flex items-center">
-                        <input 
-                            type="text" 
-                            placeholder="Search..." 
-                            value={searchQuery}
-                            onChange={handleSearchChange}
-                            className="w-full px-4 py-2 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500"
-                        />
-                        <button 
-                            onClick={toggleSearch}
-                            className="ml-4 text-gray-700 hover:text-blue-600"
-                            aria-label="Close Search"
-                        >
-                            <X className="w-6 h-6" />
-                        </button>
-                    </div>
-                </div>
-            )} */}
         </header>
     );
 };
+
 
 export default Navbar;
