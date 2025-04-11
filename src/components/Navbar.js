@@ -30,10 +30,10 @@ const Navbar = () => {
                 {/* Logo */}
                 <Link to="/">
                     <div className="flex items-center">
-                        <img
-                            src={Logo}
-                            alt="GAASH Logo"
-                            className="h-12 w-auto transition-transform hover:scale-105"
+                        <img 
+                            src={Logo} 
+                            alt="GAASH Logo" 
+                            className="h-12 w-auto transition-transform hover:scale-105" 
                         />
                     </div>
                 </Link>
@@ -42,40 +42,18 @@ const Navbar = () => {
                 <ul className="hidden md:flex space-x-6 items-center text-gray-800">
                     {navLinks.map((link) => (
                         <li key={link.to}>
-                            <Link
-                                to={link.to}
+                            <Link 
+                                to={link.to} 
                                 className="font-medium hover:text-blue-600 transition-colors duration-300"
                             >
                                 {link.label}
                             </Link>
                         </li>
                     ))}
-
-
-
-                    {/* Search Icon */}
-                    {/* <li>
-                        <button 
-                            onClick={toggleSearch} 
-                            className="text-gray-700 hover:text-blue-600 transition-colors"
-                            aria-label="Open Search"
-                        >
-                            <Search className="w-5 h-5" />
-                        </button>
-                    </li> */}
-
                 </ul>
 
                 {/* Mobile Menu Toggle */}
                 <div className="md:hidden flex items-center space-x-4">
-                    <button
-
-                        onClick={toggleSearch}
-                        className="text-gray-700 hover:text-blue-600"
-                        aria-label="Open Search"
-                    >
-                        <Search className="w-6 h-6" />
-                    </button>
                     <button
                         onClick={toggleMenu}
                         className="text-gray-700 hover:text-blue-600"
@@ -92,8 +70,9 @@ const Navbar = () => {
 
             {/* Mobile Menu Slide-out */}
             <div
-                className={`md:hidden fixed top-0 right-0 h-full w-64 bg-white shadow-xl transform ${isMenuOpen ? "-translate-x-0" : "translate-x-full"
-                    } transition-transform duration-300 ease-in-out z-50`}
+                className={`md:hidden fixed top-0 right-0 h-full w-64 bg-white shadow-xl transform ${
+                    isMenuOpen ? "-translate-x-0" : "translate-x-full"
+                } transition-transform duration-300 ease-in-out z-50`}
             >
                 <button
                     className="absolute top-6 right-6 text-gray-700"
@@ -117,10 +96,6 @@ const Navbar = () => {
                         >
                             <Link 
                                 to={link.to} 
-                    {navLinks.map((link) => (
-                        <li key={link.to}>
-                            <Link
-                                to={link.to}
                                 className="block py-2 hover:text-blue-600 transition-colors"
                                 onClick={closeMenu}
                             >
