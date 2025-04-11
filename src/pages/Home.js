@@ -62,7 +62,7 @@ const HomePage = () => {
                                 <img
                                     src={NIT}
                                     alt="NIT Logo"
-                                    className="h-16 w-auto object-contain sm:h-18 lg:h-20"
+                                    className="h-20 w-auto object-contain sm:h-18 lg:h-20"
                                 />
                             </div>
 
