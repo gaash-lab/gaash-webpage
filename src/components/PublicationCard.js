@@ -4,15 +4,15 @@ import { Github, Newspaper } from 'lucide-react';
 
 const PublicationCard = ({ publication }) => {
     return (
-        <div className="bg-white rounded-lg shadow-md p-6 hover:shadow-lg transition-shadow duration-300 border-l-4 border-blue-500">
+        <div className="bg-white rounded-lg shadow-md p-6 hover:shadow-lg transition-shadow duration-300 border-l-4 border-blue-500 max-w-5xl mx-auto">
             <div className="space-y-3">
-                <h3 className="text-xl font-bold text-gray-900 hover:text-blue-800 transition-colors">
+                <h3 className="text-2xl font-bold text-gray-900 hover:text-blue-800 transition-colors">
                     {publication.title}
                 </h3>
                 <div className="text-gray-600 text-sm">
-                    <p className="font-medium">{publication.authors}</p>
+                    <p className="font-medium text-lg">{publication.authors}</p>
                     <div className="flex flex-col gap-4 md:gap-0 md:flex-row md:items-center md:justify-between mt-6 space-y-2 md:space-y-0">
-                        <span className="bg-blue-50 text-blue-800 px-3 py-1 rounded-full text-xs font-semibold w-fit">
+                        <span className="bg-blue-50 text-blue-800 px-3 py-1 rounded-full text-md font-semibold w-fit">
                             {publication.conference}
                         </span>
                         <div className="flex space-x-4">

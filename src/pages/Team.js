@@ -90,22 +90,14 @@ const StudentCard = ({ name, website, linkedin, github }) => {
     const link = getLink();
 
     return (
-        <div className="bg-white rounded-lg shadow-lg hover:shadow-xl transition-all duration-300 py-3 px-6 border-blue-500 border-2 transform hover:-translate-y-1 w-64 relative"
-            style={{ boxShadow: '0 10px 15px -3px rgba(0,0,0,0.1), 0 4px 6px -4px rgba(0,0,0,0.1)', width: '300px' }}>
+        <div className="bg-white rounded-lg shadow-lg hover:shadow-xl transition-all duration-300 py-2 px-2 border-blue-500 border-2 transform hover:-translate-y-1 w-64 relative"
+            style={{ boxShadow: '0 10px 15px -3px rgba(0,0,0,0.1), 0 4px 6px -4px rgba(0,0,0,0.1)', width: '200px' }}>
             {link ? (
                 <a href={link} target="_blank" rel="noopener noreferrer" className="block">
-                    <h3 className="text-lg font-medium text-blue-600 hover:text-blue-800 text-center">{name}</h3>
+                    <h3 className="text-md font-medium text-blue-600 hover:text-blue-800 text-center">{name}</h3>
                 </a>
             ) : (
-                <h3 className="text-lg font-medium text-gray-700 text-center">{name}</h3>
-            )}
-
-            {link && (
-                <div className="absolute top-1/2 right-4 transform -translate-y-1/2">
-                    {website ? <FaGlobe size={20} className="text-blue-500" /> :
-                        linkedin ? <FaLinkedin size={20} className="text-blue-500" /> :
-                            <FaGithub size={20} className="text-blue-500" />}
-                </div>
+                <h3 className="text-md font-medium text-gray-700 text-center">{name}</h3>
             )}
         </div>
     );

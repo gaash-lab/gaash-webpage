@@ -60,7 +60,7 @@ export const PhdScholars = [
 export const ExternalCollaborators = [
     {
         name: "Tajamul Ashraf",
-        designation: "Research Associate",
+        designation: "Researcher (MBZUAI)",
         email: "tajamul@sit.iitd.ac.in",
         website: "https://www.tajamulashraf.com/",
         github: "https://github.com/Tajamul21",
@@ -122,7 +122,7 @@ export const Students = [
         type: "student"
     },
     {
-        name: "Abdul Muqsit Zargar",
+        name: "Abdul Muqsit",
         designation: "B.Tech Student",
         email: "abdulmuqsit_2021bite007@nitsri.ac.in",
         linkedin: "https://www.linkedin.com/in/abdul-muqsit-zargar-779211233/",
