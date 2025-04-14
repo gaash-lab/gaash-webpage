@@ -6,11 +6,11 @@ This repository contains the official website for the GAASH Lab (AI Research Lab
 ## Clone the repository:
 
 ```bash
-git clone https://github.com/your-username/gaash-lab-website.git
+git clone https://github.com/gaash-lab/webpage.git
 ```
 
 ```bash
-cd gaash-lab-website
+cd webpage
 ```
 
 ## Install dependencies:
@@ -28,7 +28,7 @@ npm start
 ```
 
 This will launch the website on http://localhost:3000 (or another port if 3000 is busy).
-Build
+# Build
 ## To create a production build:
 ```bash
 npm run build
