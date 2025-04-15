@@ -1,12 +1,11 @@
 import React, { useEffect } from 'react';
 import banner_about from './../assets/banner-about.avif';
 import ScrollToTop from '../components/ScrollToTop';
-// import { Mail, Globe, Linkedin, Github } from "lucide-react";
+import { Icon } from '@iconify/react';
+import gmailIcon from '@iconify-icons/logos/google-gmail';
+import githubIcon from '@iconify-icons/logos/github-icon';
+import globeIcon from '@iconify-icons/fa-solid/globe';
 import { SiGooglescholar } from "react-icons/si";
-import { FaLinkedin } from "react-icons/fa";
-import { FaGithub } from "react-icons/fa";
-import { SiGmail } from "react-icons/si";
-import { FaGlobe } from "react-icons/fa";
 import { facultyMembers, PhdScholars, Students, ExternalCollaborators, PostDoc } from '../data/team';
 import noimage from '../assets/noimage.png';
 const ProfileCard = ({ name, designation, email, website, scholar, image, type, linkedin, github }) => {
@@ -47,30 +46,31 @@ const ProfileCard = ({ name, designation, email, website, scholar, image, type, 
             />
             <h3 className="text-xl font-bold text-gray-900 text-center">{name}</h3>
             <p className="text-gray-600 text-center mb-4">{designation}</p>
-            <div className="flex justify-center space-x-4 text-blue-600">
+            <div className="flex justify-center items-center space-x-4 text-blue-600">
                 {email && (
                     <a href={`mailto:${email}`} className="hover:text-blue-800">
-                        <SiGmail size={20} />
+                        <Icon icon={gmailIcon} width="20" />
                     </a>
                 )}
                 {website && (
                     <a href={website} target="_blank" rel="noopener noreferrer" className="hover:text-blue-800">
-                        <FaGlobe size={20} />
+                        <Icon icon={globeIcon} width="20" />
                     </a>
                 )}
                 {scholar && (
                     <a href={scholar} target="_blank" rel="noopener noreferrer" className="hover:text-blue-800">
-                        <SiGooglescholar size={20} />
+                        {/* <Icon icon={googleScholarIcon} width="20" /> */}
+                        <SiGooglescholar size="20" color='#0a66c2' />
                     </a>
                 )}
                 {linkedin && (
                     <a href={linkedin} target="_blank" rel="noopener noreferrer" className="hover:text-blue-800">
-                        <FaLinkedin size={20} />
+                        <Icon icon="logos:linkedin-icon" width="20" />
                     </a>
                 )}
                 {github && (
                     <a href={github} target="_blank" rel="noopener noreferrer" className="hover:text-blue-800">
-                        <FaGithub size={20} />
+                        <Icon icon={githubIcon} width="20" />
                     </a>
                 )}
             </div>

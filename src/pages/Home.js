@@ -17,23 +17,19 @@ const labImages = [
 
 const HomePage = () => {
     useEffect(() => {
-        window.scrollTo(0, 0); // Scroll to the top
+        window.scrollTo(0, 0); 
     }, []);
     return (
         <div className="w-full min-h-screen bg-gray-50">
 
-            {/* Changed from h-screen to min-h-screen to prevent overflow issues */}
             <section className="relative min-h-screen bg-gradient-to-br from-blue-50 to-gray-100 overflow-hidden py-16 lg:py-20">
-                {/* Decorative elements */}
                 <div className="absolute top-0 left-0 w-full h-full">
                     <div className="absolute top-10 left-10 w-64 h-64 rounded-full bg-blue-200 opacity-20 blur-3xl"></div>
                     <div className="absolute bottom-10 right-10 w-80 h-80 rounded-full bg-blue-300 opacity-20 blur-3xl"></div>
                 </div>
 
                 <div className="container mx-auto px-4 relative z-10">
-                    {/* Changed to flex-col on mobile and grid on md screens */}
                     <div className="flex flex-col md:grid md:grid-cols-2 gap-12 items-center">
-                        {/* Lab Description with logos */}
                         <div className="space-y-6">
                             <div className="inline-block bg-blue-100 px-4 py-1 rounded-full">
                                 <span className="text-blue-800 font-medium">Welcome to</span>
@@ -41,14 +37,12 @@ const HomePage = () => {
 
                             {/* Logos and Lab title section - improved responsive design */}
                             <div className="flex flex-col items-center mb-6 space-y-4 sm:space-y-6 lg:space-y-0 lg:flex-row lg:justify-between">
-                                {/* Logo 1 - visible on all screen sizes */}
                                 <img
                                     src={Logo}
                                     alt="GAASH Logo"
                                     className="h-16 w-auto object-contain sm:h-18 lg:h-20"
                                 />
 
-                                {/* Title - centered on mobile/tablet, between logos on desktop */}
                                 <div className="text-center">
                                     <h1 className="text-2xl sm:text-3xl lg:text-4xl font-bold text-blue-900">
                                         GAASH Lab
@@ -58,7 +52,6 @@ const HomePage = () => {
                                     </p>
                                 </div>
 
-                                {/* Logo 2 - visible on all screen sizes */}
                                 <img
                                     src={NIT}
                                     alt="NIT Logo"
@@ -88,7 +81,6 @@ const HomePage = () => {
                             </div>
                         </div>
 
-                        {/* Lab Image Slideshow - Adjusted height for mobile */}
                         <div className="rounded-2xl overflow-hidden shadow-2xl border-2 border-blue-100 transform hover:scale-[1.02] transition duration-300 w-full mb-6">
                             <Swiper
                                 modules={[Autoplay, Pagination, Navigation]}
