@@ -94,7 +94,7 @@ const StudentCard = ({ name, website, linkedin, github }) => {
             style={{ boxShadow: '0 10px 15px -3px rgba(0,0,0,0.1), 0 4px 6px -4px rgba(0,0,0,0.1)', width: '200px' }}>
             {link ? (
                 <a href={link} target="_blank" rel="noopener noreferrer" className="block">
-                    <h3 className="text-md font-medium text-blue-600 hover:text-blue-800 text-center">{name}</h3>
+                    <h3 className="text-md font-medium text-gray-700 hover:text-blue-800 text-center">{name}</h3>
                 </a>
             ) : (
                 <h3 className="text-md font-medium text-gray-700 text-center">{name}</h3>
@@ -117,50 +117,50 @@ const Team = () => {
             </div>
 
             <div className="container mx-auto px-4 py-20">
-                <section className="mb-12 lg:mb-28">
+                {facultyMembers.length > 0 && <section className="mb-12 lg:mb-28">
                     <h3 className="text-3xl font-bold text-center text-gray-700 border-b-4 border-blue-500 pb-2 mb-6">Faculty Members</h3>
                     <div className="flex flex-wrap justify-center gap-x-16 gap-y-8 lg:gap-y-16 lg:gap-x-[600px]">
                         {facultyMembers.map((member, index) => (
                             <ProfileCard key={index} {...member} />
                         ))}
                     </div>
-                </section>
+                </section>}
 
-                <section className="mb-12 lg:mb-28">
+                {ExternalCollaborators.length > 0 && <section className="mb-12 lg:mb-28">
                     <h3 className="text-3xl font-bold text-center text-gray-700 border-b-4 border-blue-500 pb-2 mb-6">External Collaborators</h3>
                     <div className="flex flex-wrap justify-center gap-x-16 gap-y-8 lg:gap-y-16 lg:gap-x-[400px]">
                         {ExternalCollaborators.map((member, index) => (
                             <ProfileCard key={index} {...member} />
                         ))}
                     </div>
-                </section>
+                </section>}
 
-                <section className="mb-12 lg:mb-28">
+               {PostDoc.length > 0 && <section className="mb-12 lg:mb-28">
                     <h3 className="text-3xl font-bold text-center text-gray-700 border-b-4 border-blue-500 pb-2 mb-6">Post Doc</h3>
                     <div className="flex flex-wrap justify-center gap-x-16 gap-y-8 lg:gap-y-16 lg:gap-x-20">
                         {PostDoc.map((member, index) => (
                             <ProfileCard key={index} {...member} />
                         ))}
                     </div>
-                </section>
+                </section>}
 
-                <section className="mb-12 lg:mb-28">
+                {PhdScholars.length > 0 && <section className="mb-12 lg:mb-28">
                     <h3 className="text-3xl font-bold text-center text-gray-700 border-b-4 border-blue-500 pb-2 mb-6">PHD Scholars</h3>
                     <div className="flex flex-wrap justify-center gap-x-16 gap-y-8 lg:gap-y-16 lg:gap-x-20">
                         {PhdScholars.map((member, index) => (
                             <ProfileCard key={index} {...member} />
                         ))}
                     </div>
-                </section>
+                </section>}
 
-                <section className="mb-12 lg:mb-28">
+                {Students.length > 0 && <section className="mb-12 lg:mb-28">
                     <h3 className="text-3xl font-bold text-center text-gray-700 border-b-4 border-blue-500 pb-2 mb-6">B.Tech Students</h3>
                     <div className="flex flex-wrap justify-center gap-6">
                         {Students.map((student, index) => (
                             <StudentCard key={index} {...student} />
                         ))}
                     </div>
-                </section>
+                </section>}
             </div>
 
             <ScrollToTop />

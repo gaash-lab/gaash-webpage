@@ -21,15 +21,15 @@ export const facultyMembers = [
 ];
 
 export const PostDoc = [
-    {
-        name: "Aqsa Makhdoomi",
-        designation: "Post Doc",
-        email: "aqsa_2021phaite002@nitsri.ac.in",
-        scholar: "https://scholar.google.com/citations?user=QN2u0PgAAAAJ&hl=en&oi=ao",
-        linkedin: "https://www.linkedin.com/in/aqsa-makhdoomi-425a86167/",
-        github: "https://github.com/AqsaMakhdoomi/",
-        type: "scholar"
-    }
+    // {
+    //     name: "Aqsa Makhdoomi",
+    //     designation: "Post Doc",
+    //     email: "aqsa_2021phaite002@nitsri.ac.in",
+    //     scholar: "https://scholar.google.com/citations?user=QN2u0PgAAAAJ&hl=en&oi=ao",
+    //     linkedin: "https://www.linkedin.com/in/aqsa-makhdoomi-425a86167/",
+    //     github: "https://github.com/AqsaMakhdoomi/",
+    //     type: "scholar"
+    // }
 ]
 
 export const PhdScholars = [
@@ -45,16 +45,24 @@ export const PhdScholars = [
     //     type: "scholar"
     // },
     
+    // {
+    //     name: "Rabia Bhat",
+    //     designation: "Phd Scholar",
+    //     email: "rabiabhat_2023phaite002@nitsri.ac.in",
+    //     scholar: "https://scholar.google.com/citations?hl=en&user=Q3t0mCdMwDoC",
+    //     image: "/team/scholars/rabia.jpg",
+    //     linkedin: "https://www.linkedin.com/in/rabia-bhat-60170235a/",
+    //     github: "https://github.com/RabiaLatief07",
+    //     type: "scholar"
+    // },
     {
-        name: "Rabia Bhat",
-        designation: "Phd Scholar",
-        email: "rabiabhat_2023phaite002@nitsri.ac.in",
-        scholar: "https://scholar.google.com/citations?hl=en&user=Q3t0mCdMwDoC",
-        image: "/team/scholars/rabia.jpg",
-        linkedin: "https://www.linkedin.com/in/rabia-bhat-60170235a/",
-        github: "https://github.com/RabiaLatief07",
+        name: "Uzmat Ul Nisa",
+        designation: "PHD Scholar",
+        email: "uzmat_2021phaite004@nitsri.ac.in",
+        scholar: "https://scholar.google.com/citations?user=ido_DnsAAAAJ&hl=en&oi=ao",
+        linkedin: "http://www.linkedin.com/in/uzmat-ul-nisa",
         type: "scholar"
-    }
+    },
 ];
 
 export const ExternalCollaborators = [
@@ -90,53 +98,6 @@ export const Students = [
         type: "student"
     },
     {
-        name: "Sobiya Mir",
-        designation: "B.Tech Student",
-        email: "mir.sobiya1233@gmail.com",
-        linkedin: "https://www.linkedin.com/in/sobiyam40",
-        type: "student"
-    },
-    {
-        name: "Ruchi Khandelwal",
-        designation: "B.Tech Student",
-        email: "ruchikhandelwal914@gmail.com",
-        website: "https://nextjs-portfolio-lac-zeta.vercel.app/",
-        linkedin: "https://www.linkedin.com/in/ruchi-khandelwal-996874228/",
-        github: "https://github.com/Caliber-Ruchi",
-        type: "student"
-    },
-    {
-        name: "Kashish Mittal",
-        designation: "B.Tech Student",
-        email: "kashish_2021bite089@nitsri.ac.in",
-        linkedin: "https://www.linkedin.com/in/kashish-mittal-038a93244/",
-        github: "https://github.com/Mittalkashish",
-        type: "student"
-    },
-    {
-        name: "Aliza Mushtaq",
-        designation: "B.Tech Student",
-        email: "aliza_2021bite021@nitsri.ac.in",
-        linkedin: "https://www.linkedin.com/in/aliza-mushtaq-ba8150239/",
-        github: "https://github.com/aliza597",
-        type: "student"
-    },
-    {
-        name: "Abdul Muqsit",
-        designation: "B.Tech Student",
-        email: "abdulmuqsit_2021bite007@nitsri.ac.in",
-        linkedin: "https://www.linkedin.com/in/abdul-muqsit-zargar-779211233/",
-        github: "https://github.com/AbdulMuqsit",
-        type: "student"
-    },
-    {
-        name: "Vishal Kumar",
-        designation: "B.Tech Student",
-        email: "Vishalkumarpcb@gmail.com",
-        linkedin: "https://www.linkedin.com/in/vishal-kumar-935455277",
-        type: "student"
-    },
-    {
         email: "abrarnitsri0@gmail.com",
         linkedin: "https://www.linkedin.com/in/abrar-ul-riyaz-a7852432a?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=android_app",
         github: "https://github.com/AbrarAhmed435",
@@ -153,39 +114,8 @@ export const Students = [
         type: "student"
     },
     {
-        email: "kaneek17@gmail.com",
-        website: "https://sites.google.com/view/aneek-khan",
-        scholar: "https://scholar.google.com/citations?user=jZwvnqoAAAAJ&hl=en",
-        linkedin: "https://www.linkedin.com/in/mohammad-aneek-79867124a/",
-        github: "https://github.com/aneekirfan",
-        designation: "B.Tech Student",
-        name: "Aneek",
-        type: "student"
-    },
-    {
-        email: "mdkaishar770@gmail.com",
-        linkedin: "https://www.linkedin.com/in/md-kaishar-44baa5240?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=android_app",
-        github: "https://github.com/Kaishar770",
-        designation: "B.Tech Student",
-        name: "Kaishar",
-        type: "student"
-    },
-    {
-        email: "divyam_2021bite088@nitsri.ac.in",
-        linkedin: "linkedin.com/in/yehlelink/",
-        github: "github.com/Mayvid0",
-        designation: "B.Tech Student",
-        name: "Divyam",
-        type: "student"
-    },
-    {
-        email: "tushar_2021bite065@nitsri.ac.in",
-        website: "https://gentle-squirrel-15b98e.netlify.app/",
-        linkedin: "https://www.linkedin.com/in/tusharverma01/",
-        github: "https://github.com/tusharv01",
-        designation: "B.Tech Student",
-        name: "Tushar Verma",
-        type: "student"
+        name: "Mohammad Hashid",
+        email: "hashidmyt@gmail.com"
     }
 ];
 

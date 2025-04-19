@@ -3,7 +3,6 @@ import { ArrowRight, Users, Laptop, Award, GraduationCap } from "lucide-react";
 import { Link } from "react-router-dom";
 import banner_join from "../assets/banner_join.jpg"
 
-// Sample opportunities data - you can move this to your constants file
 const researchOpportunities = [
     {
         title: "PhD Positions",
@@ -75,9 +74,6 @@ const JoinUsPage = () => {
                 <div className="container mx-auto px-4 py-20 text-white">
                     <div className="max-w-4xl mx-auto text-center">
                         <h1 className="text-4xl md:text-5xl font-bold mb-6">Join Our Research Lab</h1>
-                        {/* <p className="text-xl md:text-2xl text-blue-100 mb-8">
-                            Be part of groundbreaking research in AI and Computer Vision at GAASH Lab
-                        </p> */}
                     </div>
                 </div>
             </div>
@@ -148,26 +144,6 @@ const JoinUsPage = () => {
                     </div>
                 </div>
             </section>
-
-            {/* CTA Section
-            <section className="bg-gradient-to-br from-blue-100 to-blue-50 py-12">
-                <div className="container mx-auto px-4 text-center">
-                    <h3 className="text-2xl font-bold text-blue-900 mb-6">
-                        Don't see a position that matches your profile?
-                    </h3>
-                    <p className="text-gray-700 max-w-2xl mx-auto mb-8">
-                        We're always interested in connecting with talented researchers. Feel free to reach out to discuss potential collaboration opportunities.
-                    </p>
-                    <Link
-                        className="inline-flex items-center bg-blue-600 text-white px-8 py-3 rounded-lg 
-            hover:bg-blue-700 transition font-medium text-lg shadow-md hover:shadow-lg"
-                        to="/contact"
-                    >
-                        Contact Us
-                        <ArrowRight className="ml-2" />
-                    </Link>
-                </div>
-            </section> */}
         </div>
     );
 };

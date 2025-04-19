@@ -22,7 +22,7 @@ export const researchInterests = [
         title: "AI Driven Computer Architectures",
         description: "Designing next-generation hardware architectures optimized for AI workloads, including specialized processors and memory systems for efficient deep learning.",
         category: "Computer Architecture",
-        projectCount: 23,
+        projectCount: 3,
         img: "/research/ca.jpeg",
         detailLink: "/research/computer-architecture"
     },
@@ -31,7 +31,7 @@ export const researchInterests = [
         title: "Data Algorithmics and Distributed Computation",
         description: "Developing scalable algorithms and distributed computing frameworks for processing massive datasets efficiently across clusters and cloud environments.",
         category: "Distributed Systems",
-        projectCount: 16,
+        projectCount: 7,
         img: "/research/data.jpg",
         detailLink: "/research/distributed-computation"
     },
@@ -58,6 +58,11 @@ export const newsData = {
             date: "Nov", 
             text: "One paper accepted in WACV 2024.",
             link: "https://www.tajamulashraf.com/assets/Documents/wacv/transfed.pdf"
+        },
+        { 
+            date: "Nov", 
+            text: "One paper accepted in MoSICom 2024.",
+            link: "https://ieeexplore.ieee.org/abstract/document/10880901"
         }
     ],
     2023: [
