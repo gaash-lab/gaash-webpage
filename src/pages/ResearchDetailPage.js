@@ -3,7 +3,6 @@ import { useParams, Link } from "react-router-dom";
 import { researchInterests } from "../data/constants";
 import ScrollToTop from "../components/ScrollToTop";
 import {researchDetails} from "../data/research_details"; // Import research details
-import PublicationCard from "../components/PublicationCard";
 
 const ResearchDetailPage = () => {
   const { slug } = useParams();
@@ -58,7 +57,7 @@ const ResearchDetailPage = () => {
       <div 
         className="h-[400px] bg-cover bg-center relative flex items-center justify-center"
         style={{
-          backgroundImage: `linear-gradient(rgba(0,0,0,0.7), rgba(0,0,0,0.7)), url("${detail.heroImage || research.img}")`,
+          backgroundImage: `linear-gradient(rgba(0,0,0,0.7), rgba(0,0,0,0.7)), url("${detail.heroImage}")`,
         }}
       >
         <div className="container mx-auto px-4 text-center">

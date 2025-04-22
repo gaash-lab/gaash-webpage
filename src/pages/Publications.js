@@ -44,7 +44,7 @@ const Publications = () => {
                 </div>
             </div>
 
-            <div className="container mx-auto px-4 md:px-12 lg:px-28 py-12">
+            <div className="container mx-auto px-4 md:px-12 lg:px-56 py-12">
                 {sortedYears.map((year) => (
                     <div key={year} className="mb-12">
                         <h2 className="text-4xl text-center font-bold text-gray-800 mb-8 border-b-4 border-blue-500 pb-2">
