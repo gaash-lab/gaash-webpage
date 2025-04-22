@@ -1,8 +1,13 @@
-import { AllPublications } from "./publications";
+import MultiModal from "../assets/research/multi_modal.jpg";
+import LLM from "../assets/research/llm.jpg";
+import CA from "../assets/research/ca.jpeg";
+import Data from "../assets/research/data.jpg";
+import Med from "../assets/research/med.jpeg";
 
 export const researchDetails = {
   "multi-modal-learning": {
     title: "Multi-Modal Learning",
+    heroImage: MultiModal,
     overview: "Multi-modal learning focuses on developing AI systems that can process and understand information across different types of data such as text, images, audio, and video. By integrating multiple modalities, these systems can develop a more comprehensive understanding of complex scenarios.",
     keyAreas: [
       "Vision-Language Pre-training",
@@ -15,24 +20,11 @@ export const researchDetails = {
       "Image Captioning",
       "Cross-modal Retrieval",
       "Multi-modal Sentiment Analysis"
-    ],
-    // currentProjects: [
-    //   {
-    //     title: "Robust Multi-modal Transformers",
-    //     description: "Developing transformer architectures specifically designed to handle multiple input modalities simultaneously."
-    //   },
-    //   {
-    //     title: "Self-supervised Multi-modal Learning",
-    //     description: "Exploring techniques for learning joint representations across modalities without explicit supervision."
-    //   },
-    //   {
-    //     title: "Multi-modal Knowledge Integration",
-    //     description: "Methods for integrating knowledge from diverse sources into unified representational frameworks."
-    //   }
-    // ]
+    ]
   },
   "large-langueage-modelling": {
     title: "Large Language Modelling",
+    heroImage: LLM,
     overview: "Large Language Models (LLMs) represent a revolutionary approach to natural language processing, utilizing massive neural networks trained on vast text corpora to perform a wide range of language tasks with unprecedented capabilities.",
     keyAreas: [
       "Efficient Training Methods",
@@ -63,6 +55,7 @@ export const researchDetails = {
   },
   "computer-architecture": {
     title: "AI Driven Computer Architectures",
+    heroImage: CA,
     overview: "AI-driven computer architectures represent the next frontier in computing, where hardware is specifically designed to accelerate machine learning workloads while optimizing for energy efficiency, throughput, and specialized computation patterns.",
     keyAreas: [
       "Neural Processing Units",
@@ -93,6 +86,7 @@ export const researchDetails = {
   },
   "distributed-computation": {
     title: "Data Algorithmics and Distributed Computation",
+    heroImage: Data,
     overview: "Data algorithmics and distributed computation focus on developing efficient algorithms and systems for processing massive datasets across distributed computing environments, enabling scalable data analysis and machine learning.",
     keyAreas: [
       "Distributed Machine Learning",
@@ -123,6 +117,7 @@ export const researchDetails = {
   },
   "medical-image-analysis": {
     title: "Medical Image Analysis",
+    heroImage: Med,
     overview: "Medical image analysis applies computer vision and deep learning techniques to medical imaging data, assisting healthcare professionals in diagnosis, treatment planning, and monitoring of various conditions through automated analysis.",
     keyAreas: [
       "Image Segmentation",

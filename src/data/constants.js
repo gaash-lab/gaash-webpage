@@ -1,3 +1,8 @@
+import MultiModal from "../assets/research/multi_modal.jpg";
+import LLM from "../assets/research/llm.jpg";
+import CA from "../assets/research/ca.jpeg";
+import Data from "../assets/research/data.jpg";
+import Med from "../assets/research/med.jpeg";
 export const researchInterests = [
     {
         id: 1,
@@ -5,7 +10,7 @@ export const researchInterests = [
         description: "Exploring advanced techniques for integrating and learning across multiple modalities, including vision, text, and audio data to improve AI system understanding and performance.",
         category: "Artificial Intelligence",
         projectCount: 4,
-        img: "/research/multi_modal.jpg",
+        img: MultiModal,
         detailLink: "/research/multi-modal-learning"
     },
     {
@@ -14,7 +19,7 @@ export const researchInterests = [
         description: "Developing and optimizing large-scale neural networks for natural language understanding, generation, and knowledge representation across diverse applications.",
         category: "Natural Language Processing",
         projectCount: 1,
-        img: "/research/llm.jpg",
+        img: LLM,
         detailLink: "/research/large-langueage-modelling"
     },
     {
@@ -23,7 +28,7 @@ export const researchInterests = [
         description: "Designing next-generation hardware architectures optimized for AI workloads, including specialized processors and memory systems for efficient deep learning.",
         category: "Computer Architecture",
         projectCount: 3,
-        img: "/research/ca.jpeg",
+        img: CA,
         detailLink: "/research/computer-architecture"
     },
     {
@@ -32,7 +37,7 @@ export const researchInterests = [
         description: "Developing scalable algorithms and distributed computing frameworks for processing massive datasets efficiently across clusters and cloud environments.",
         category: "Distributed Systems",
         projectCount: 7,
-        img: "/research/data.jpg",
+        img: Data,
         detailLink: "/research/distributed-computation"
     },
     {
@@ -41,7 +46,7 @@ export const researchInterests = [
         description: "Developing computer vision and deep learning techniques for medical imaging applications including disease detection, segmentation, and diagnostic support systems.",
         category: "Medical AI",
         projectCount: 3,
-        img: "/research/med.jpeg",
+        img: Med,
         detailLink: "/research/medical-image-analysis"
     }
 ];

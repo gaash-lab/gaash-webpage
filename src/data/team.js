@@ -1,3 +1,8 @@
+import Iqra from "../assets/team/faculty/iqra.png";
+import Janib from "../assets/team/faculty/janib.png";
+import Tajamul from "../assets/team/collaborators/tajamul.png";
+import Moloud from "../assets/team/collaborators/molud.png";
+import Umar from "../assets/team/scholars/umar.jpg";
 export const facultyMembers = [
     {
         name: "Dr. Janibul Bashir",
@@ -5,7 +10,7 @@ export const facultyMembers = [
         email: "janibbashir@nitsri.ac.in",
         website: "https://www.janibbashir.com/",
         scholar: "https://scholar.google.co.in/citations?user=p_VztE0AAAAJ&hl=en",
-        image: "/team/faculty/janib.png",
+        image: Janib,
         linkedin: "https://www.linkedin.com/in/janibul-bashir-272b5b70/",
         type: "faculty"
     },
@@ -15,7 +20,7 @@ export const facultyMembers = [
         email: "iqraaltaf@nitsri.ac.in",
         website: "https://sites.google.com/nitsri.net/iqraaltaf/home",
         scholar: "https://scholar.google.com/citations?user=Jzg3x20AAAAJ&hl=en",
-        image: "/team/faculty/iqra.png",
+        image: Iqra,
         type: "faculty"
     }
 ];
@@ -63,6 +68,15 @@ export const PhdScholars = [
         linkedin: "http://www.linkedin.com/in/uzmat-ul-nisa",
         type: "scholar"
     },
+    {
+        name: "Umar Bashir",
+        designation: "PhD Scholar",
+        email: "umar_2022phaite005@nitsri.ac.in",
+        scholar: "https://scholar.google.com/citations?hl=en&user=HQguZbsAAAAJ",
+        linkedin: "https://www.linkedin.com/in/umar-mir-279079116?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=android_app",
+        image: Umar,
+        type: "scholar"
+    }
 ];
 
 export const ExternalCollaborators = [
@@ -74,9 +88,18 @@ export const ExternalCollaborators = [
         github: "https://github.com/Tajamul21",
         linkedin: "https://www.linkedin.com/in/tajamul221/",
         scholar: "https://scholar.google.com/citations?user=n6fSkQ4AAAAJ&hl=en",
-        image: "/team/collaborators/tajamul.png",
+        image: Tajamul,
         type: "collaborator"
-    }
+    },
+    {
+        name: "Moloud Abdar",
+        designation: "Senior Data Scientist (University of Queensland)",
+        email: "tajamul@sit.iitd.ac.in",
+        linkedin: "https://www.linkedin.com/in/moloud-abdar-997126b9/?originalSubdomain=au",
+        scholar: "https://scholar.google.com/citations?user=PwgggdIAAAAJ&hl=en",
+        image: Moloud,
+        type: "collaborator"
+    },
 ];
 
 export const Students = [
@@ -116,6 +139,25 @@ export const Students = [
     {
         name: "Mohammad Hashid",
         email: "hashidmyt@gmail.com"
+    },
+    {
+        name: "Ashutosh Rajput",
+        email: "2023nitsgr283@nitsri.ac.in",
+        github: "https://github.com/point10xdev/",
+        type: "student"
+    },
+    {
+        name: "Vinayak Singhal",
+        email: "vinayak_2021bite032@nitsri.ac.in",
+        github: "https://github.com/imvinayak32",
+        linkedin: "http://www.linkedin.com/in/imvinayak32",
+        type: "student"
+    },
+    {
+        name: "Tejal Kumari",
+        email: "tejal_2022bite083@nitsri.ac.in",
+        linkedin: "https://www.linkedin.com/in/tejal-kumari-3b652725b?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=android_app",
+        type: "student"
     }
 ];
 

@@ -1,8 +1,8 @@
 {
-  "homepage": ".",
   "name": "gaash",
   "version": "0.1.0",
   "private": true,
+  "homepage": "https://gaash.nitsri.ac.in",
   "dependencies": {
     "@iconify-icons/fa-solid": "^1.2.4",
     "@iconify-icons/logos": "^1.2.36",
