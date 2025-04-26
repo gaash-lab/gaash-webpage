@@ -6,9 +6,9 @@ import gmailIcon from '@iconify-icons/logos/google-gmail';
 import githubIcon from '@iconify-icons/logos/github-icon';
 import globeIcon from '@iconify-icons/fa-solid/globe';
 import { SiGooglescholar } from "react-icons/si";
-import { facultyMembers, PhdScholars, Students, ExternalCollaborators, PostDoc } from '../data/team';
+import { facultyMembers, PhdScholars, Students, ExternalCollaborators, ProjectStaff } from '../data/team';
 import noimage from '../assets/noimage.png';
-const ProfileCard = ({ name, designation, email, website, scholar, image, type, linkedin, github }) => {
+const ProfileCard = ({ name, designation,university, email, website, scholar, image, type, linkedin, github }) => {
     const cardPadding = {
         faculty: "p-8",
         collaborator: "p-8",
@@ -45,7 +45,8 @@ const ProfileCard = ({ name, designation, email, website, scholar, image, type, 
                 className={`object-cover object-top rounded-full mx-auto mb-4 border-4 border-blue-500 ${imageStyles[type]}`}
             />
             <h3 className="text-xl font-bold text-gray-900 text-center">{name}</h3>
-            <p className="text-gray-600 text-center mb-4">{designation}</p>
+            <p className="text-gray-600 text-center">{designation}</p>
+            <p className="text-gray-600 text-center mb-4">{university}</p>
             <div className="flex justify-center items-center space-x-4 text-blue-600">
                 {email && (
                     <a href={`mailto:${email}`} className="hover:text-blue-800">
@@ -135,17 +136,17 @@ const Team = () => {
                     </div>
                 </section>}
 
-               {PostDoc.length > 0 && <section className="mb-12 lg:mb-28">
-                    <h3 className="text-3xl font-bold text-center text-gray-700 border-b-4 border-blue-500 pb-2 mb-6">Post Doc</h3>
+               {ProjectStaff.length > 0 && <section className="mb-12 lg:mb-28">
+                    <h3 className="text-3xl font-bold text-center text-gray-700 border-b-4 border-blue-500 pb-2 mb-6">Project Staff</h3>
                     <div className="flex flex-wrap justify-center gap-x-16 gap-y-8 lg:gap-y-16 lg:gap-x-20">
-                        {PostDoc.map((member, index) => (
+                        {ProjectStaff.map((member, index) => (
                             <ProfileCard key={index} {...member} />
                         ))}
                     </div>
                 </section>}
 
                 {PhdScholars.length > 0 && <section className="mb-12 lg:mb-28">
-                    <h3 className="text-3xl font-bold text-center text-gray-700 border-b-4 border-blue-500 pb-2 mb-6">PHD Scholars</h3>
+                    <h3 className="text-3xl font-bold text-center text-gray-700 border-b-4 border-blue-500 pb-2 mb-6">PhD Scholars</h3>
                     <div className="flex flex-wrap justify-center gap-x-16 gap-y-8 lg:gap-y-16 lg:gap-x-20">
                         {PhdScholars.map((member, index) => (
                             <ProfileCard key={index} {...member} />
