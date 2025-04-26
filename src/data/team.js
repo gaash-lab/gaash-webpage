@@ -4,6 +4,7 @@ import Tajamul from "../assets/team/collaborators/tajamul.png";
 import Rabia from "../assets/team/scholars/rabia.jpg";
 import Umar from "../assets/team/scholars/umar.jpg";
 import Sadia from "../assets/team/collaborators/sadia.png";
+import Aqib from "../assets/team/scholars/aqib.png";
 import { image } from "framer-motion/client";
 export const facultyMembers = [
     {
@@ -84,6 +85,25 @@ export const PhdScholars = [
         linkedin: "https://www.linkedin.com/in/umar-mir-279079116?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=android_app",
         image: Umar,
         type: "scholar"
+    },
+    {
+        name: "Aaqib Zahoor",
+        designation: "PhD Scholar",
+        university: "NIT Srinagar",
+        email: "aaqib_phaite003@nitsri.ac.in",
+        scholar: "https://scholar.google.com/citations?user=z0lFQhEAAAAJ&hl=en&oi=sra",
+        linkedin: "https://www.linkedin.com/in/aaqib-zahoor-112a47147/",
+        website: "https://www.aaqibzahoor.in/",
+        github: "https://github.com/AaqibZ",
+        image: Aqib,
+        type: "scholar"
+    },
+    {
+        name: "Aqsa Urooj",
+        designation: "PhD Scholar",
+        university: "NIT Srinagar",
+        linkedin: "https://www.linkedin.com/in/aksaurooj07/",
+        type: "scholar",
     }
 ];
 

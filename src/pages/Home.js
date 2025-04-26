@@ -40,9 +40,9 @@ const HeroSection = () => {
             <div className="container mx-auto px-4 relative z-10">
                 <div className="flex flex-col md:grid md:grid-cols-2 gap-12 items-center">
                     <div className="space-y-6">
-                        <div className="inline-block bg-blue-100 px-4 py-1 rounded-full">
+                        {/* <div className="inline-block bg-blue-100 px-4 py-1 rounded-full">
                             <span className="text-blue-800 font-medium">Welcome to</span>
-                        </div>
+                        </div> */}
 
                         {/* Logos and Lab title section - improved responsive design */}
                         <div className="flex flex-col items-center mb-6 space-y-4 sm:space-y-6 lg:space-y-0 lg:flex-row lg:justify-between">
@@ -56,9 +56,9 @@ const HeroSection = () => {
                                 <h1 className="text-2xl sm:text-3xl lg:text-4xl font-bold text-blue-900">
                                     GAASH Lab
                                 </h1>
-                                <p className="text-lg sm:text-xl lg:text-2xl font-semibold text-blue-700 mt-1">
+                                {/* <p className="text-lg sm:text-xl lg:text-2xl font-semibold text-blue-700 mt-1">
                                     AI Research Laboratory
-                                </p>
+                                </p> */}
                             </div>
 
                             <img

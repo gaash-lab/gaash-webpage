@@ -7,7 +7,6 @@ import {
     Twitter, 
     Linkedin, 
     Github, 
-    Send 
 } from "lucide-react";
 
 const Footer = () => {
@@ -85,7 +84,7 @@ const Footer = () => {
                         {[
                             { icon: Twitter, link: "#" },
                             { icon: Linkedin, link: "#" },
-                            { icon: Github, link: "https://github.com/gaash-lab" }
+                            { icon: Github, link: "https://github.com/gaash-lab" },
                         ].map((social, index) => (
                             <a 
                                 key={index} 
@@ -105,7 +104,7 @@ const Footer = () => {
             <div className="container mx-auto px-4 mt-12 pt-6 border-t border-blue-700 text-center">
                 <p className="text-blue-200">
                     © {currentYear} GAASH Lab. 
-                    All Rights Reserved, designed by Tavaheed Tariq
+                    All Rights Reserved, designed by <a href="https://tavaheed.netlify.app/" target="_blank" className="hover:cursor-pointer hover:underline">Tavaheed Tariq</a>
                 </p>
             </div>
         </footer>
