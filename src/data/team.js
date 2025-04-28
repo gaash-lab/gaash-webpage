@@ -139,6 +139,7 @@ export const ExternalCollaborators = [
         scholar: "https://scholar.google.com/citations?user=AnznRVEAAAAJ&hl=en",
         linkedin: "https://www.linkedin.com/in/sadia-hussain-1b0028119/",
         image: Sadia,
+        github: "https://github.com/sadiahussain",
         type: "collaborator"
     }
 ];

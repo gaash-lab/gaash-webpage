@@ -120,7 +120,7 @@ const Team = () => {
             <div className="container mx-auto px-4 py-20">
                 {facultyMembers.length > 0 && <section className="mb-12 lg:mb-28">
                     <h3 className="text-3xl font-bold text-center text-gray-700 border-b-4 border-blue-500 pb-2 mb-6">Faculty Members</h3>
-                    <div className="flex flex-wrap justify-center gap-x-16 gap-y-8 lg:gap-y-16 lg:gap-x-[600px]">
+                    <div className="flex flex-wrap justify-center gap-x-16 gap-y-8 lg:gap-y-16 lg:gap-x-[400px]">
                         {facultyMembers.map((member, index) => (
                             <ProfileCard key={index} {...member} />
                         ))}
@@ -129,7 +129,7 @@ const Team = () => {
 
                 {ExternalCollaborators.length > 0 && <section className="mb-12 lg:mb-28">
                     <h3 className="text-3xl font-bold text-center text-gray-700 border-b-4 border-blue-500 pb-2 mb-6">External Collaborators</h3>
-                    <div className="flex flex-wrap justify-center gap-x-16 gap-y-8 lg:gap-y-16 lg:gap-x-[400px]">
+                    <div className="flex flex-wrap justify-center gap-x-16 gap-y-8 lg:gap-y-16 lg:gap-x-[200px]">
                         {ExternalCollaborators.map((member, index) => (
                             <ProfileCard key={index} {...member} />
                         ))}
