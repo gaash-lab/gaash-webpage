@@ -125,6 +125,7 @@ const ResearchCard = ({ research }) => {
                     </svg>
                 </Link>
             </div>
+            <ScrollToTop />
         </div>
     );
 };

@@ -5,6 +5,7 @@ import Rabia from "../assets/team/scholars/rabia.jpg";
 import Umar from "../assets/team/scholars/umar.jpg";
 import Sadia from "../assets/team/collaborators/sadia.png";
 import Aqib from "../assets/team/scholars/aqib.png";
+import Moloud from "../assets/team/collaborators/molud.png";
 import { image } from "framer-motion/client";
 export const facultyMembers = [
     {
@@ -120,16 +121,16 @@ export const ExternalCollaborators = [
         image: Tajamul,
         type: "collaborator"
     },
-    // {
-    //     name: "Dr. Moloud Abdar",
-    //     designation: "Senior Data Scientist",
-    //     university: "University of Queensland",
-    //     email: "tajamul@sit.iitd.ac.in",
-    //     linkedin: "https://www.linkedin.com/in/moloud-abdar-997126b9/?originalSubdomain=au",
-    //     scholar: "https://scholar.google.com/citations?user=PwgggdIAAAAJ&hl=en",
-    //     image: Moloud,
-    //     type: "collaborator"
-    // },
+    {
+        name: "Dr. Moloud Abdar",
+        designation: "Senior Data Scientist",
+        university: "University of Queensland",
+        email: "tajamul@sit.iitd.ac.in",
+        linkedin: "https://www.linkedin.com/in/moloud-abdar-997126b9/?originalSubdomain=au",
+        scholar: "https://scholar.google.com/citations?user=PwgggdIAAAAJ&hl=en",
+        image: Moloud,
+        type: "collaborator"
+    },
     {
         name: "Dr. Sadia Hussain",
         designation: "Contractual Faculty",

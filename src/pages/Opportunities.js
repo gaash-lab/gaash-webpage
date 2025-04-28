@@ -1,6 +1,7 @@
 import React, { useEffect } from "react";
 import { ArrowRight, Users, Laptop, Award, GraduationCap } from "lucide-react";
 import { Link } from "react-router-dom";
+import ScrollToTop from '../components/ScrollToTop';
 import banner_join from "../assets/banner_join.jpg"
 
 const researchOpportunities = [
@@ -144,6 +145,7 @@ const JoinUsPage = () => {
                     </div>
                 </div>
             </section>
+            <ScrollToTop />
         </div>
     );
 };

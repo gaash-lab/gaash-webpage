@@ -9,6 +9,7 @@ import 'swiper/css/navigation';
 import lab1 from "../assets/lab-pics/lab1.jpg";
 import Logo from "../assets/Logo.png";
 import NIT from "../assets/NIT.png";
+import ScrollToTop from '../components/ScrollToTop';
 import { highlights, recentNews } from "../data/constants";
 
 const labImages = [
@@ -26,6 +27,7 @@ const HomePage = () => {
             <RecentNews />
             <HighlightsSection />
             <CTASection />
+            <ScrollToTop />
         </div>
     );
 };
@@ -232,6 +234,7 @@ const CTASection = () => {
                     <ArrowRight className="ml-2" />
                 </Link>
             </div>
+            
         </section>
     )
 }
