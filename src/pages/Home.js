@@ -9,6 +9,7 @@ import 'swiper/css/navigation';
 import lab1 from "../assets/lab-pics/lab1.jpg";
 import Logo from "../assets/Logo.png";
 import NIT from "../assets/NIT.png";
+import ScrollToTop from '../components/ScrollToTop';
 import { highlights, recentNews } from "../data/constants";
 
 const labImages = [
@@ -26,6 +27,7 @@ const HomePage = () => {
             <RecentNews />
             <HighlightsSection />
             <CTASection />
+            <ScrollToTop />
         </div>
     );
 };
@@ -40,25 +42,25 @@ const HeroSection = () => {
             <div className="container mx-auto px-4 relative z-10">
                 <div className="flex flex-col md:grid md:grid-cols-2 gap-12 items-center">
                     <div className="space-y-6">
-                        <div className="inline-block bg-blue-100 px-4 py-1 rounded-full">
+                        {/* <div className="inline-block bg-blue-100 px-4 py-1 rounded-full">
                             <span className="text-blue-800 font-medium">Welcome to</span>
-                        </div>
+                        </div> */}
 
                         {/* Logos and Lab title section - improved responsive design */}
                         <div className="flex flex-col items-center mb-6 space-y-4 sm:space-y-6 lg:space-y-0 lg:flex-row lg:justify-between">
                             <img
                                 src={Logo}
                                 alt="GAASH Logo"
-                                className="h-16 w-auto object-contain sm:h-18 lg:h-20"
+                                className="h-20 w-auto object-contain sm:h-18 lg:h-20"
                             />
 
                             <div className="text-center">
                                 <h1 className="text-2xl sm:text-3xl lg:text-4xl font-bold text-blue-900">
                                     GAASH Lab
                                 </h1>
-                                <p className="text-lg sm:text-xl lg:text-2xl font-semibold text-blue-700 mt-1">
+                                {/* <p className="text-lg sm:text-xl lg:text-2xl font-semibold text-blue-700 mt-1">
                                     AI Research Laboratory
-                                </p>
+                                </p> */}
                             </div>
 
                             <img
@@ -69,11 +71,11 @@ const HeroSection = () => {
                         </div>
 
                         <p className="text-gray-700 leading-relaxed text-base sm:text-lg text-justify">
-                            The <span className="text-blue-700 font-semibold">GAASH Lab</span> at the National Institute of Technology Srinagar is committed to advancing foundational and applied research in AI-Driven Computer Architectures, Federated Learning and Transformers, Transformers for Large Language Models (LLMs), Computer Vision, Data Science, Probabilistic Analysis of Networks, Distributed Computation, and Algorithmic Design. The lab focuses on developing efficient and interpretable visual architectures, constructing robust and diverse datasets, and designing scalable algorithms.
+                        Welcome to the <span className="text-blue-700 font-semibold">GAASH Lab</span> at the National Institute of Technology Srinagar. GAASH Lab conducts fundamental and applied research in computer vision, machine learning, natural language processing, and AI-driven architectures for the semantic understanding of visual and multimodal data.
                         </p>
 
                         <p className="text-gray-700 leading-relaxed text-base sm:text-lg text-justify">
-                            Our research spans object detection, scene understanding, domain adaptation, and human-centric perception, with applications across natural scenes, satellite imagery, medical scans, and surveillance systems.
+                        Our research spans a wide range of topics: language and multimodal modeling, medical AI, object detection, scene understanding, domain adaptation, human-centric perception, probabilistic network analysis, distributed computation, and scalable algorithm design. We work with diverse data sources, including natural scene imagery, satellite and drone data, medical scans, and surveillance footage. Research at GAASH Lab is focused on developing efficient, interpretable models and building robust datasets for real-world applications across vision, language, and distributed AI systems.
                         </p>
 
                         <div className="flex pt-6">
@@ -136,15 +138,15 @@ const ResearchFocus = () => {
                         </p>
                     </div>
                     <div className="bg-white bg-opacity-10 p-6 rounded-xl backdrop-blur-sm hover:bg-opacity-20 transition transform hover:-translate-y-1 hover:shadow-xl">
-                        <h3 className="text-xl font-semibold mb-4">Computer Vision & Deep Learning</h3>
+                        <h3 className="text-xl font-semibold mb-4">Computer Vision</h3>
                         <p className="text-gray-100">
                             Exploring the synergy between CNNs and transformers to push the boundaries of visual recognition and classification.
                         </p>
                     </div>
                     <div className="bg-white bg-opacity-10 p-6 rounded-xl backdrop-blur-sm hover:bg-opacity-20 transition transform hover:-translate-y-1 hover:shadow-xl">
-                        <h3 className="text-xl font-semibold mb-4">Federated Learning & LLMs</h3>
+                        <h3 className="text-xl font-semibold mb-4">Distributed Network Analysis and Algorithmic Design</h3>
                         <p className="text-gray-100">
-                            Developing privacy-preserving AI systems with transformer models emphasizing zero-shot and in-context learning capabilities.
+                            Designing scalable algorithms and analyzing distributed systems to optimize performance and reliability in complex networks.
                         </p>
                     </div>
                 </div>
@@ -232,6 +234,7 @@ const CTASection = () => {
                     <ArrowRight className="ml-2" />
                 </Link>
             </div>
+            
         </section>
     )
 }

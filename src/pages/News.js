@@ -1,6 +1,7 @@
 import React, { useEffect, useState } from "react";
 import { ChevronRight, CalendarDays } from "lucide-react";
 import banner_news from './../assets/banner-news.avif';
+import ScrollToTop from '../components/ScrollToTop';
 import { newsData } from "../data/constants";
 import { Link } from "react-router-dom";
 
@@ -84,6 +85,7 @@ const NewsPage = () => {
                     ))}
                 </div>
             </div>
+            <ScrollToTop />
         </div>
     );
 };

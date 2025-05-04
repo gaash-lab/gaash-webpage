@@ -1,5 +1,6 @@
 import React, { useEffect } from 'react';
 import { Mail, Phone, MapPin, Clock } from "lucide-react";
+import ScrollToTop from '../components/ScrollToTop';
 import banner_contact from './../assets/banner-contact.avif';
 
 const Contact = () => {
@@ -115,6 +116,7 @@ const Contact = () => {
                     ></iframe>
                 </div>
             </section>
+            <ScrollToTop />
         </div>
     );
 };
