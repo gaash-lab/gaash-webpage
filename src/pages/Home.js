@@ -71,11 +71,11 @@ const HeroSection = () => {
                         </div>
 
                         <p className="text-gray-700 leading-relaxed text-base sm:text-lg text-justify">
-                        Welcome to the <span className="text-blue-700 font-semibold">GAASH Lab</span> at the National Institute of Technology Srinagar. GAASH Lab conducts fundamental and applied research in computer vision, machine learning, natural language processing, and AI-driven architectures for the semantic understanding of visual and multimodal data.
+                        Welcome to the <span className="text-blue-700 font-semibold">GAASH Lab</span> at the National Institute of Technology Srinagar. 
                         </p>
 
                         <p className="text-gray-700 leading-relaxed text-base sm:text-lg text-justify">
-                        Our research spans a wide range of topics: language and multimodal modeling, medical AI, object detection, scene understanding, domain adaptation, human-centric perception, probabilistic network analysis, distributed computation, and scalable algorithm design. We work with diverse data sources, including natural scene imagery, satellite and drone data, medical scans, and surveillance footage. Research at GAASH Lab is focused on developing efficient, interpretable models and building robust datasets for real-world applications across vision, language, and distributed AI systems.
+                            At GAASH Lab, our group studies Artificial Intelligence at the intersection of Computer Vision, AI-Driven Computer Architectures, Network Science and Data Algorithmics.. Our ultimate goal is to build models and agents with a human-like ability to generalize in real and diverse environments. We believe understanding how to continually develop knowledge and acquire new skills from just raw sensory data will play a vital role in achieving this goal. Our group draws inspiration from psychology to build practical systems at the interface of vision and learning  that can learn using data as its own supervision. If you would like to join our group, please send us a short email note without any documents.
                         </p>
 
                         <div className="flex pt-6">
@@ -183,7 +183,6 @@ const RecentNews = () => {
         </section>
     )
 };
-
 
 const HighlightsSection = () => {
     return (

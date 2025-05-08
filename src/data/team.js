@@ -6,7 +6,7 @@ import Umar from "../assets/team/scholars/umar.jpg";
 import Sadia from "../assets/team/collaborators/sadia.png";
 import Aqib from "../assets/team/scholars/aqib.png";
 import Moloud from "../assets/team/collaborators/molud.png";
-import { image } from "framer-motion/client";
+import Aksa from "../assets/team/scholars/aksa.jpeg";
 export const facultyMembers = [
     {
         name: "Dr. Janibul Bashir",
@@ -100,11 +100,14 @@ export const PhdScholars = [
         type: "scholar"
     },
     {
-        name: "Aqsa Urooj",
+        name: "Aksa Urooj",
         designation: "PhD Scholar",
         university: "NIT Srinagar",
+        image: Aksa,
+        github: "http://github.com/aksa-urooj",
+        email: "aksaurooj62@gmail.com",
         linkedin: "https://www.linkedin.com/in/aksaurooj07/",
-        type: "scholar",
+        type: "scholar"
     }
 ];
 
