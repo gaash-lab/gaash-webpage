@@ -68,7 +68,7 @@ const Footer = () => {
                     <div className="mt-6 flex space-x-4">
                         {[
                             { icon: Twitter, link: "#" },
-                            { icon: Linkedin, link: "#" },
+                            { icon: Linkedin, link: "https://www.linkedin.com/groups/14694048/" },
                             { icon: Github, link: "https://github.com/gaash-lab" },
                         ].map((social, index) => (
                             <a 
