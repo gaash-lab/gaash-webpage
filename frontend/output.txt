@@ -1,0 +1,35 @@
+/mnt/hdd/home/tawheed/Documents/Programming/React/webpage
+├── docker-compose.yml
+├── package-lock.json
+├── package.json
+├── public/
+├── src/
+|  ├── App.js
+|  ├── Layout.js
+|  ├── assets/
+|  ├── components
+|  |  ├── Button.js
+|  |  ├── Footer.js
+|  |  ├── Heading.js
+|  |  ├── Navbar.js
+|  |  ├── PublicationCard.js
+|  |  ├── ReactSwiper.js
+|  |  └── ScrollToTop.js
+|  ├── data
+|  |  ├── constants.js
+|  |  ├── publications.js
+|  |  ├── research_details.js
+|  |  └── team.js
+|  ├── index.css
+|  ├── index.js
+|  └── pages
+|     ├── Contact.js
+|     ├── Home.js
+|     ├── News.js
+|     ├── Opportunities.js
+|     ├── Publications.js
+|     ├── Research.js
+|     ├── ResearchDetailPage.js
+|     └── Team.js
+├── tailwind.config.js
+└── yarn.lock
