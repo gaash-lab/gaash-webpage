@@ -1,23 +1,27 @@
 import React, { useState } from "react";
 import { Link } from "react-router-dom";
-import { Menu, X, Search } from "lucide-react";
+import { Menu, X, ChevronDown } from "lucide-react";
 import Logo from "../assets/Logo.png";
 
 const Navbar = () => {
     const [isMenuOpen, setIsMenuOpen] = useState(false);
-    const [isSearchOpen, setIsSearchOpen] = useState(false);
-    const [searchQuery, setSearchQuery] = useState("");
+    const [isTeamDropdownOpen, setIsTeamDropdownOpen] = useState(false);
 
     const toggleMenu = () => setIsMenuOpen(!isMenuOpen);
     const closeMenu = () => setIsMenuOpen(false);
-
-    const toggleSearch = () => setIsSearchOpen(!isSearchOpen);
-    const handleSearchChange = (e) => setSearchQuery(e.target.value);
+    const toggleTeamDropdown = () => setIsTeamDropdownOpen(!isTeamDropdownOpen);
 
     const navLinks = [
         { to: "/", label: "Home" },
         { to: "/news", label: "News" },
-        { to: "/team", label: "Team" },
+        { 
+            
+            label: "Team", 
+            dropdown: [
+                { to: "/team/research-team", label: "Research Team" },
+                { to: "/team/web-team", label: "Web Team" }
+            ]
+        },
         { to: "/research", label: "Research" },
         { to: "/publications", label: "Publications" },
         { to: "/opportunities", label: "Opportunities" },
@@ -41,13 +45,39 @@ const Navbar = () => {
                 {/* Desktop Navigation */}
                 <ul className="hidden md:flex space-x-6 items-center text-gray-800">
                     {navLinks.map((link) => (
-                        <li key={link.to}>
-                            <Link 
-                                to={link.to} 
-                                className="font-medium hover:text-blue-600 transition-colors duration-300"
-                            >
-                                {link.label}
-                            </Link>
+                        <li key={link.to} className="relative">
+                            {link.dropdown ? (
+                                <div className="relative">
+                                    <button
+                                        onClick={toggleTeamDropdown}
+                                        className="flex items-center font-medium hover:text-blue-600 transition-colors duration-300"
+                                    >
+                                        {link.label}
+                                        <ChevronDown className="w-4 h-4 ml-1" />
+                                    </button>
+                                    {isTeamDropdownOpen && (
+                                        <div className="absolute top-full left-0 mt-2 w-48 bg-white shadow-lg rounded-md border">
+                                            {link.dropdown.map((dropdownItem) => (
+                                                <Link
+                                                    key={dropdownItem.to}
+                                                    to={dropdownItem.to}
+                                                    className="block px-4 py-2 text-gray-800 hover:bg-gray-100 hover:text-blue-600 transition-colors"
+                                                    onClick={() => setIsTeamDropdownOpen(false)}
+                                                >
+                                                    {dropdownItem.label}
+                                                </Link>
+                                            ))}
+                                        </div>
+                                    )}
+                                </div>
+                            ) : (
+                                <Link 
+                                    to={link.to} 
+                                    className="font-medium hover:text-blue-600 transition-colors duration-300"
+                                >
+                                    {link.label}
+                                </Link>
+                            )}
                         </li>
                     ))}
                 </ul>
@@ -94,13 +124,39 @@ const Navbar = () => {
                                 animationFillMode: 'forwards'
                             }}
                         >
-                            <Link 
-                                to={link.to} 
-                                className="block py-2 hover:text-blue-600 transition-colors"
-                                onClick={closeMenu}
-                            >
-                                {link.label}
-                            </Link>
+                            {link.dropdown ? (
+                                <div>
+                                    <button
+                                        onClick={toggleTeamDropdown}
+                                        className="flex items-center py-2 hover:text-blue-600 transition-colors w-full text-left"
+                                    >
+                                        {link.label}
+                                        <ChevronDown className="w-4 h-4 ml-1" />
+                                    </button>
+                                    {isTeamDropdownOpen && (
+                                        <div className="ml-4 mt-2 space-y-2">
+                                            {link.dropdown.map((dropdownItem) => (
+                                                <Link
+                                                    key={dropdownItem.to}
+                                                    to={dropdownItem.to}
+                                                    className="block py-1 text-gray-600 hover:text-blue-600 transition-colors"
+                                                    onClick={closeMenu}
+                                                >
+                                                    {dropdownItem.label}
+                                                </Link>
+                                            ))}
+                                        </div>
+                                    )}
+                                </div>
+                            ) : (
+                                <Link 
+                                    to={link.to} 
+                                    className="block py-2 hover:text-blue-600 transition-colors"
+                                    onClick={closeMenu}
+                                >
+                                    {link.label}
+                                </Link>
+                            )}
                         </li>
                     ))}
                 </ul>
@@ -108,6 +164,5 @@ const Navbar = () => {
         </header>
     );
 };
-
 
 export default Navbar;

@@ -58,6 +58,7 @@ const ResearchDetailPage = () => {
         className="h-[400px] bg-cover bg-center relative flex items-center justify-center"
         style={{
           backgroundImage: `linear-gradient(rgba(0,0,0,0.7), rgba(0,0,0,0.7)), url("${detail.heroImage}")`,
+          backgroundAttachment: 'fixed'
         }}
       >
         <div className="container mx-auto px-4 text-center">

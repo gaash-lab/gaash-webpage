@@ -2,15 +2,13 @@ import React, { useEffect, useState } from "react";
 import { ChevronRight, CalendarDays } from "lucide-react";
 import banner_news from './../assets/banner-news.avif';
 import ScrollToTop from '../components/ScrollToTop';
-import { newsData } from "../data/constants";
 import { Link } from "react-router-dom";
 import axios from '../api/axios';
 
 
 const NewsPage = () => {
-    const [activeYear, setActiveYear] = useState(
-        Object.keys(newsData).sort((a, b) => b - a)[0]
-    );
+    const [activeYear, setActiveYear] = useState(null);
+    const [news, setNews] = useState(null);
     useEffect(() => {
         window.scrollTo(0, 0); // Scroll to the top
     }, []);
@@ -19,7 +17,22 @@ const NewsPage = () => {
         const fetchNews = async () => {
             try {
                 const response = await axios.get('news/');
-                console.log(response.data);
+                const groupedNews = response.data.reduce((acc, item) => {
+                    const year = item.year;
+                    if (!acc[year]) {
+                        acc[year] = [];
+                    }
+                    acc[year].push({
+                        date: item.date,
+                        text: item.text,
+                        link: item.link,
+                        recent: item.recent
+                    });
+                    return acc;
+                }, {});
+                console.log(groupedNews);
+                setNews(groupedNews);
+                setActiveYear(Object.keys(groupedNews).sort((a, b) => b - a)[0]);
             } catch (error) {
                 console.error("Error fetching news:", error);
             }
@@ -34,6 +47,7 @@ const NewsPage = () => {
                 className="h-[300px] bg-cover bg-center relative flex items-center justify-center"
                 style={{
                     backgroundImage: `linear-gradient(rgba(0,0,0,0.6), rgba(0,0,0,0.6)), url("${banner_news}")`,
+                    backgroundAttachment: 'fixed'
                 }}
             >
                 <div className="text-center px-4">
@@ -45,7 +59,7 @@ const NewsPage = () => {
 
             <div className="container mx-auto px-4 py-16 max-w-4xl">
                 <div className="flex justify-center space-x-4 mb-12">
-                    {Object.keys(newsData).sort((a, b) => b - a).map((year) => (
+                    {news && Object.keys(news).sort((a, b) => b - a).map((year) => (
                         <button
                             key={year}
                             onClick={() => setActiveYear(year)}
@@ -62,7 +76,7 @@ const NewsPage = () => {
                 </div>
 
                 <div className="space-y-6">
-                    {newsData[activeYear].map((newsItem, index) => (
+                    {news && news[activeYear].map((newsItem, index) => (
                         <div
                             key={index}
                             className="bg-white p-6 rounded-lg shadow-md hover:shadow-lg transition-shadow group"

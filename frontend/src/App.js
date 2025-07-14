@@ -1,4 +1,4 @@
-import { BrowserRouter as Router, Route, Routes, Navigate } from "react-router-dom";
+import { BrowserRouter as Router, Route, Routes } from "react-router-dom";
 import Home from "./pages/Home";
 import News from "./pages/News";
 import Team from "./pages/Team";
@@ -9,6 +9,7 @@ import Layout from "./Layout";
 import ResearchDetailPage from "./pages/ResearchDetailPage";
 import Opportunities from "./pages/Opportunities";
 import AdminRedirect from './pages/AdminRedirect';
+import WebTeam from "./pages/WebTeam";
 
 function App() {
   return (
@@ -21,7 +22,8 @@ function App() {
         <Route path="/" element={<Layout />} >
           <Route index element={<Home />} />
           <Route path="/news" element={<News />} />
-          <Route path="/team" element={<Team />} />
+          <Route path="/team/research-team" element={<Team />} />
+          <Route path="/team/web-team" element={<WebTeam />} />
           <Route path="/research" element={<Research />} />
           <Route path="/research/:slug" element={<ResearchDetailPage />} />
           <Route path="/publications" element={<Publications />} />

@@ -14,6 +14,7 @@ const Contact = () => {
                 className="w-full h-[400px] bg-cover bg-center relative z-10"
                 style={{
                     backgroundImage: `linear-gradient(rgba(0,0,0,0.6), rgba(0,0,0,0.5)), url("${banner_contact}")`,
+                    backgroundAttachment: 'fixed'
                 }}
             >
                 <div className="absolute inset-0 flex items-center justify-center">

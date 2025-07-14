@@ -7,7 +7,7 @@ import Sadia from "../assets/team/collaborators/sadia.png";
 import Aqib from "../assets/team/scholars/aqib.png";
 import Moloud from "../assets/team/collaborators/molud.png";
 import Aksa from "../assets/team/scholars/aksa.jpeg";
-export const facultyMembers = [
+export const team = [
     {
         name: "Dr. Janibul Bashir",
         designation: "Department of Information Technology",
@@ -28,10 +28,7 @@ export const facultyMembers = [
         scholar: "https://scholar.google.com/citations?user=Jzg3x20AAAAJ&hl=en",
         image: Iqra,
         type: "faculty"
-    }
-];
-
-export const ProjectStaff = [
+    },
     {
         name: "Aqsa Makhdoomi",
         designation: "SRF",
@@ -40,23 +37,8 @@ export const ProjectStaff = [
         scholar: "https://scholar.google.com/citations?user=QN2u0PgAAAAJ&hl=en&oi=ao",
         linkedin: "https://www.linkedin.com/in/aqsa-makhdoomi-425a86167/",
         github: "https://github.com/AqsaMakhdoomi/",
-        type: "scholar"
-    }
-]
-
-export const PhdScholars = [
-    // {
-    //     name: "Mushtaq Ahmad",
-    //     designation: "Phd Scholar",
-    //     email: "mushtaqdar_2024phait002@nitsri.ac.in",
-    //     website: "https://www.bibifatima.in",
-    //     scholar: "https://scholar.google.com/citations?user=8bUpLFAAAAAJ&hl=en",
-    //     image: "/team/scholars/mushtaq.jpg",
-    //     linkedin: "https://www.linkedin.com/in/mushtaq-ahmad-39459044/",
-    //     github: "https://github.com/mushtaqdar1",
-    //     type: "scholar"
-    // },
-    
+        type: "project"
+    },
     {
         name: "Rabia Bhat",
         designation: "PhD Scholar",
@@ -108,10 +90,7 @@ export const PhdScholars = [
         email: "aksaurooj62@gmail.com",
         linkedin: "https://www.linkedin.com/in/aksaurooj07/",
         type: "scholar"
-    }
-];
-
-export const ExternalCollaborators = [
+    },
     {
         name: "Tajamul Ashraf",
         designation: "Researcher",
@@ -144,10 +123,7 @@ export const ExternalCollaborators = [
         image: Sadia,
         github: "https://github.com/sadiahussain",
         type: "collaborator"
-    }
-];
-
-export const Students = [
+    },
     {
         name: "Tavaheed Tariq",
         designation: "B.Tech Student",
@@ -183,7 +159,8 @@ export const Students = [
     },
     {
         name: "Mohammad Hashid",
-        email: "hashidmyt@gmail.com"
+        email: "hashidmyt@gmail.com",
+        type: "student"
     },
     {
         name: "Tejal Kumari",
@@ -197,7 +174,6 @@ export const Students = [
         designation: "B.Tech Student",
         linkedin: "https://www.linkedin.com/in/burhaan-rasheed-zargar?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=android_app",
         github: "https://github.com/BurhaanRasheedZargar",
-
+        type: "student"
     }
 ];
-

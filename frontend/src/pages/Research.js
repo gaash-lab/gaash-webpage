@@ -29,6 +29,7 @@ const Research = () => {
                 className="h-[300px] bg-cover bg-center relative flex items-center justify-center"
                 style={{
                     backgroundImage: `linear-gradient(rgba(0,0,0,0.6), rgba(0,0,0,0.6)), url("${banner_research}")`,
+                    backgroundAttachment: 'fixed'
                 }}
             >
                 <div className="text-center px-4">

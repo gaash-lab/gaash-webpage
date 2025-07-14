@@ -70,6 +70,7 @@ const JoinUsPage = () => {
                 className="h-[300px] bg-cover bg-center relative flex items-center justify-center"
                 style={{
                     backgroundImage: `linear-gradient(rgba(0,0,0,0.6), rgba(0,0,0,0.5)), url("${banner_join}")`,
+                    backgroundAttachment: 'fixed'
                 }}
             >
                 <div className="container mx-auto px-4 py-20 text-white">

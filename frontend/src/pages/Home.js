@@ -1,4 +1,4 @@
-import React, { useEffect } from "react";
+import React, { useEffect, useState } from "react";
 import { ArrowRight } from "lucide-react";
 import { Link } from "react-router-dom";
 import { Swiper, SwiperSlide } from 'swiper/react';
@@ -10,8 +10,9 @@ import lab1 from "../assets/lab-pics/lab1.jpg";
 import Logo from "../assets/Logo.png";
 import NIT from "../assets/NIT.png";
 import ScrollToTop from '../components/ScrollToTop';
-import { highlights, newsData } from "../data/constants";
-import { ChevronRight, CalendarDays } from "lucide-react";
+import { highlights } from "../data/constants";
+import { CalendarDays } from "lucide-react";
+import axios from '../api/axios';
 
 const labImages = [
     lab1
@@ -110,7 +111,7 @@ const HeroSection = () => {
                                 <SwiperSlide key={index}>
                                     <img
                                         src={image}
-                                        alt={`Lab Image ${index + 1}`}
+                                        alt={`Lab ${index + 1}`}
                                         className="w-full h-full object-cover"
                                         loading="lazy"
                                     />
@@ -157,8 +158,19 @@ const ResearchFocus = () => {
 };
 
 const RecentNews = () => {
-    // Filter news from all years to get only recent ones
-    const recentNews = Object.values(newsData).flat().filter(news => news.recent === true);
+    const [news, setNews] = useState(null);
+    useEffect(() => {
+        const fetchNews = async () => {
+            try {
+                const response = await axios.get('news/');
+                setNews(response.data.filter(item => item.recent === true));
+            } catch (error) {
+                console.error("Error fetching news:", error);
+            }
+        };
+
+        fetchNews();
+    }, []);
     return (
         <section className="bg-white py-16">
             <div className="container mx-auto px-4">
@@ -168,7 +180,7 @@ const RecentNews = () => {
                 <div className="max-w-3xl mx-auto space-y-4">
 
                     
-                    {recentNews.filter(news => news.recent === true)
+                    {news && news.filter(news => news.recent === true)
                         .map((news, index) => (
                             <div
                                 key={index}

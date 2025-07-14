@@ -6,43 +6,52 @@ import gmailIcon from '@iconify-icons/logos/google-gmail';
 import githubIcon from '@iconify-icons/logos/github-icon';
 import globeIcon from '@iconify-icons/fa-solid/globe';
 import { SiGooglescholar } from "react-icons/si";
-import { facultyMembers, PhdScholars, Students, ExternalCollaborators, ProjectStaff } from '../data/team';
 import noimage from '../assets/noimage.png';
+import axios from '../api/axios';
+
+
 const ProfileCard = ({ name, designation,university, email, website, scholar, image, type, linkedin, github }) => {
     const cardPadding = {
         faculty: "p-8",
         collaborator: "p-8",
         scholar: "p-6",
+        project: "p-6",
     };
 
     const imageStyles = {
         faculty: "w-48 h-48 mt-2",
         collaborator: "w-40 h-40 mt-2",
         scholar: "w-32 h-32 mt-2",
+        project: "w-32 h-32 mt-2",
     };
 
     const boxWidth = {
         faculty: "400px",
         collaborator: "350px",
-        scholar: "300px"
+        scholar: "300px",
+        project: "300px",
     };
 
+    const defaultPadding = "p-6";
+    const defaultImageStyle = "w-32 h-32 mt-2";
+    const defaultBoxWidth = "300px";
+
     useEffect(() => {
-        window.scrollTo(0, 0); // Scroll to the top
+        window.scrollTo(0, 0); 
     }, []);
 
     return (
         <div
-            className={`bg-white rounded-lg  border-blue-500 border-2 ${cardPadding[type]} transition-shadow duration-300 transform hover:-translate-y-1 hover:shadow-xl`}
+            className={`bg-white rounded-lg  border-blue-500 border-2 ${cardPadding[type] || defaultPadding} transition-shadow duration-300 transform hover:-translate-y-1 hover:shadow-xl`}
             style={{
-                width: `${boxWidth[type]}`,
+                width: boxWidth[type] || defaultBoxWidth,
                 boxShadow: '0 10px 15px -3px rgba(0,0,0,0.1), 0 4px 6px -4px rgba(0,0,0,0.1)'
             }}
         >
             <img
                 src={image ? image : noimage}
                 alt={name}
-                className={`object-cover object-top rounded-full mx-auto mb-4 border-4 border-blue-500 ${imageStyles[type]}`}
+                className={`object-cover object-top rounded-full mx-auto mb-4 border-4 border-blue-500 ${imageStyles[type] || defaultImageStyle}`}
             />
             <h3 className="text-xl font-bold text-gray-900 text-center">{name}</h3>
             <p className="text-gray-600 text-center">{designation}</p>
@@ -105,11 +114,49 @@ const StudentCard = ({ name, website, linkedin, github }) => {
 };
 
 const Team = () => {
+    const [team, setTeam] = React.useState(null);
+    useEffect(() => {
+        const fetchTeamData = async () => {
+            try {
+                const response = await axios.get('/team'); 
+                console.log('Team data fetched:', response.data);
+                if (response.data && Array.isArray(response.data)) {
+                    setTeam(response.data);
+                } else {
+                    console.error('Invalid team data format:', response.data);
+                }
+            } catch (error) {
+                console.error('Error fetching team data:', error);
+            }
+        }
+        fetchTeamData();
+    }, [])
+
+    if (!team) {
+        return (
+            <div className="flex items-center justify-center min-h-screen">
+                <div className="text-center">
+                    <h1 className="text-2xl font-bold text-gray-700">Loading
+    Team Data...</h1>
+                    <p className="text-gray-500">Please wait while we fetch the team information.</p>
+                </div>
+            </div>
+        );
+    }
+
+
+    const facultyMembers = team.filter(member => member.type === 'faculty');
+    const PhdScholars = team.filter(member => member.type === 'scholar');
+    const Students = team.filter(member => member.type === 'student');
+    const ExternalCollaborators = team.filter(member => member.type === 'collaborator');
+    const ProjectStaff = team.filter(member => member.type === 'project');
     return (
         <div className="bg-gray-50 min-h-screen">
             <div
                 className="h-[300px] bg-cover bg-center relative flex items-center justify-center"
-                style={{ backgroundImage: `linear-gradient(rgba(0,0,0,0.6), rgba(0,0,0,0.6)), url("${banner_about}")` }}
+                style={{ backgroundImage: `linear-gradient(rgba(0,0,0,0.6), rgba(0,0,0,0.6)), url("${banner_about}")`,
+                backgroundAttachment: 'fixed'
+             }}
             >
                 <div className="text-center">
                     <h1 className="text-5xl font-bold text-white mb-4">Our Team and Collaborators</h1>
