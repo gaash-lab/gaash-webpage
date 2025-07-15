@@ -17,4 +17,4 @@ class PublicationListAPIView(generics.ListAPIView):
 
 class WebTeamMemberListAPIView(generics.ListAPIView):
     queryset = WebTeamMember.objects.all().order_by('name')
-    serializer_class = TeamMemberSerializer
+    serializer_class = WebTeamMemberSerializer

@@ -64,7 +64,7 @@ class WebTeamMember(models.Model):
     ])
 
     def __str__(self):
-        return f"{self.name} ({self.designation})"
+        return f"{self.name} ({self.role})"
 
 class Publication(models.Model):
     title = models.CharField(max_length=512, default="Untitled Paper")

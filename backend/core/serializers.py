@@ -17,6 +17,11 @@ class PublicationSerializer(serializers.ModelSerializer):
         fields = '__all__'
 
 class WebTeamMemberSerializer(serializers.ModelSerializer):
+    projects = serializers.SerializerMethodField()
+
     class Meta:
         model = WebTeamMember
         fields = '__all__'
+
+    def get_projects(self, obj):
+        return [p.strip() for p in obj.projects.split(',')] if obj.projects else []
