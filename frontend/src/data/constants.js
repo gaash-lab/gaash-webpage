@@ -51,43 +51,42 @@ export const researchInterests = [
     }
 ];
 
-export const newsData = {
-    2025: [
-        { 
-            date: "Apr", 
-            text: "4 H100 GPU Cluster deployed to boost compute",
-            recent: true
-        }
-    ],
-    2024: [
-        { 
-            date: "Nov", 
-            text: "One paper accepted in WACV 2024.",
-            link: "https://www.tajamulashraf.com/assets/Documents/wacv/transfed.pdf",
-            recent: true
-        },
-        { 
-            date: "Nov", 
-            text: "One paper accepted in MoSICom 2024.",
-            link: "https://ieeexplore.ieee.org/abstract/document/10880901",
-            recent: false
-        }
-    ],
-    2023: [
-        { 
-            date: "July", 
-            text: "One paper accepted in CVIP 2023.",
-            link: "https://www.tajamulashraf.com/assets/Documents/cvip/022.pdf",
-            recent: false
-        },
-        { 
-            date: "March", 
-            text: "One paper accepted in ICDSA 2023.",
-            link: "https://www.tajamulashraf.com/assets/Documents/icdsa/paper.pdf",
-            recent: false
-        }
-    ]
-};
+export const newsData = [
+    { 
+        date: "Apr", 
+        text: "4 H100 GPU Cluster deployed to boost compute",
+        recent: true,
+        year: 2025
+    },
+    { 
+        date: "Nov", 
+        text: "One paper accepted in WACV 2024.",
+        link: "https://www.tajamulashraf.com/assets/Documents/wacv/transfed.pdf",
+        recent: true,
+        year: 2024
+    },
+    { 
+        date: "Nov", 
+        text: "One paper accepted in MoSICom 2024.",
+        link: "https://ieeexplore.ieee.org/abstract/document/10880901",
+        recent: false,
+        year: 2024
+    },
+    { 
+        date: "July", 
+        text: "One paper accepted in CVIP 2023.",
+        link: "https://www.tajamulashraf.com/assets/Documents/cvip/022.pdf",
+        recent: false,
+        year: 2023
+    },
+    { 
+        date: "March", 
+        text: "One paper accepted in ICDSA 2023.",
+        link: "https://www.tajamulashraf.com/assets/Documents/icdsa/paper.pdf",
+        recent: false,
+        year: 2023
+    }
+];
 
 export const highlights = [
     {
